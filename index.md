@@ -88,7 +88,7 @@ STFTはShort Term Fourier Transformのことであり、 $\|\|・\|\|_F$ , $\|\|
 
 <img width="653" alt="スクリーンショット 2023-02-06 1 44 42" src="https://user-images.githubusercontent.com/35299183/216832429-6054285c-20f1-4cb3-a086-027fc3e6b114.png">
 
-(単音と曲の音声も載せる。案としては正弦波を3つのラベルでそれぞれ動かしたものとか)
+(何かの曲で再合成して載せる。案としては正弦波を3つのラベルでそれぞれ動かしたものとか)
 
 <img width="653" alt="スクリーンショット 2023-02-06 1 43 32" src="https://user-images.githubusercontent.com/35299183/216832368-e7272d40-264b-4b73-beea-123b513a2be8.png">
 
