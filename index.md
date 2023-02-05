@@ -52,8 +52,8 @@
 
 #### アトリビュートラベルの算出
   - ウェーブテーブルの分析は、静的音色について表される音響特徴量を用いる必要がある。
-  - Kreković[^1]は、brightness, richness, fullnessの３種類のアトリビュートラベルを音響特長量から計算
-  - 上記と同様の手法を用いて、条件付けに使用するラベルを算出
+  - Kreković[^1]は、brightness, richness, fullnessの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を採用
+  - 上記のラベルをCVAEの学習と条件付け生成に用いる
 
 #### データセット
   - Adventure Kid Research & Technology[^2]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
