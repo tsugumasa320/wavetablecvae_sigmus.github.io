@@ -2,21 +2,6 @@
 
 ## 湯谷 承将, 山本 雄也, 中谷 秀洋, 寺澤 洋子
 
-{.info}
-:   これはタイトルなしの付箋です。__
-    コンパクトになります。
-    
-  - {.tree} C:¥temp¥catalpa
-      - catalpa.exe
-      - index.html
-      - LICENSE.txt
-      - etc
-          - firebase
-              - config.json
-          - netlify
-              - index.html
-    
-
 このWebサイトは、第136回音楽情報科学研究発表会 デモ・萌芽・議論セッションで発表の
 “Wavetable合成の為のアトリビュート操作型CVAEエフェクターの初期検討”についてです。
 
