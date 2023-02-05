@@ -1,3 +1,5 @@
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script> <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 # Wavetable合成の為のアトリビュート操作型CVAEエフェクターの初期検討
 
 ## 湯谷 承将, 山本 雄也, 中谷 秀洋, 寺澤 洋子
