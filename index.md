@@ -27,10 +27,14 @@
   - 任意の波形1周期分の情報を保存(以下、ウェーブテーブル)
   - ウェーブテーブルの繰り返し速度を変える事でオシレーターとして任意の音高を出力する
   - デジタル音響合成の基礎となる技術であり、多くのシンセサイザーで用いられる
+
+##### 参考
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   
 #### CVAE(Conditional Variational Autoencoder)
   - Encoder-Decoderネットワークに基づいた、確率的生成モデルの一種
-  - 入力データに対して条件付きで生成を行うことが可能  
+  - 入力データに対して条件付きで生成を行うことが可能
+  <!-- 図を作る? -->
  
 ### 提案手法
   
@@ -40,11 +44,13 @@
   - 上記と同様の手法を用いて、条件付けに使用するラベルを算出
 
 #### データセット
-  - Adventure Kid Research & Technology[^2]が提供している モノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
+  - Adventure Kid Research & Technology[^2]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
+  <!-- 図を作る? -->
 
 #### モデル構成
   - 波形の時間依存性を捉えるために、 畳み込みとアップサンプリングを行うモデルを設計
   - Encoder-Decoderの全層に条件付けを実施
+  <!-- 図を作る? -->
 
 #### 損失関数
   - 音響信号の特徴と波形は一意に対応するものでなく、位相が異なっていても同様のスペクトルを得る事がある
@@ -52,6 +58,8 @@
   - スペクトルの分解能を上げる為に、6つ分のウェーブテーブルを連結し、(引用入れる)スペクトル距離を算出する
 
  $$ S(x,y) =  \frac{||STFT(x) - STFT(y)||_F}{||STFT(x)||_F} + log(||STFT(x) -STFT(y)||_1) $$
+ 
+STFTはShort Term Fourier Transformのことであり、 $\|\|・\|\|_F$ , $\|\|・\|\|_1$ はそれぞれフロべニウスノルム、L1ノルムである。
     
 ### 結果/考察
 
