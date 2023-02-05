@@ -50,13 +50,13 @@
 
 <img width="429" alt="スクリーンショット 2023-02-06 1 13 53" src="https://user-images.githubusercontent.com/35299183/216830929-169b2213-c489-4c05-92d8-46cb35d0a326.png">
 
-#### アトリビュートラベルの算出
+#### データセット
+  - Adventure Kid Research & Technology[^2]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
+
+##### アトリビュートラベルの算出
   - ウェーブテーブルの分析は、静的音色について表される音響特徴量を用いる必要がある。
   - Kreković[^1]は、brightness, richness, fullnessの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を採用
   - 上記のラベルをCVAEの学習と条件付け生成に用いる
-
-#### データセット
-  - Adventure Kid Research & Technology[^2]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
 
 #### モデル構成
   - 波形の時間依存性を捉えるために、 畳み込みとアップサンプリングを行うモデルを設計
