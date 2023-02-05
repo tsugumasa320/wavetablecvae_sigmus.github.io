@@ -67,7 +67,7 @@
   - 特徴を正確に捉える為にスペクトルによって損失を計算
   - スペクトルの分解能を上げる為に、6つ分のウェーブテーブルを連結し、(引用入れる)スペクトル距離を算出する
 
- $$ S(x,y) =  \frac{||STFT(x) - STFT(y)||_F}{||STFT(x)||_F} + log(||STFT(x) -STFT(y)||_1) $$
+$$ S(x,y) =  \frac{||STFT(x) - STFT(y)||_F}{||STFT(x)||_F} + log(||STFT(x) -STFT(y)||_1) $$
  
 STFTはShort Term Fourier Transformのことであり、 $\|\|・\|\|_F$ , $\|\|・\|\|_1$ はそれぞれフロべニウスノルム、L1ノルムである。
     
