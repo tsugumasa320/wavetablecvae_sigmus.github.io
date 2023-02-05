@@ -38,7 +38,7 @@
   - ウェーブテーブルの繰り返し速度を変える事でオシレーターとして任意の音高を出力する
   - デジタル音響合成の基礎となる技術であり、多くのシンセサイザーで用いられる
 
-##### 参考
+##### 参考動画
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   
 #### CVAE(Conditional Variational Autoencoder)
@@ -64,8 +64,8 @@
 
 #### 損失関数
   - 音響信号の特徴と波形は一意に対応するものでなく、位相が異なっていても同様のスペクトルを得る事がある
-  - 特徴を正確に捉える為にスペクトルによって損失を計算
-  - スペクトルの分解能を上げる為に、6つ分のウェーブテーブルを連結し、(引用入れる)スペクトル距離を算出する
+  - 特徴を正確に捉える為にSTFTによって、スペクトルを計算
+  - スペクトルの分解能を上げる為に、6つ分のウェーブテーブルを連結し、(引用入れる)スペクトル距離を用いて損失とする
 
 $$ S(x,y) =  \frac{||STFT(x) - STFT(y)||_F}{||STFT(x)||_F} + log(||STFT(x) -STFT(y)||_1) $$
  
