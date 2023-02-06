@@ -50,14 +50,14 @@
  
 ### 提案手法
 
-<img width="429" alt="スクリーンショット 2023-02-06 1 13 53" src="https://user-images.githubusercontent.com/35299183/216830929-169b2213-c489-4c05-92d8-46cb35d0a326.png">
+<img width="791" alt="スクリーンショット 2023-02-06 22 18 21" src="https://user-images.githubusercontent.com/35299183/216981585-e3923563-6f67-4b8d-9bd7-90918d794c30.png">
 
 #### データセット
-  - Adventure Kid Research & Technology[^2]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
+  - Adventure Kid Research & Technology[^1]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
 
 ##### アトリビュートラベルの算出
   - ウェーブテーブルの分析は、静的音色について表される音響特徴量を用いる必要がある。
-  - Kreković[^1]は、brightness, richness, fullnessの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を採用
+  - Kreković[^2]は、brightness, richness, fullnessの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を採用
   - 上記のラベルをCVAEの学習と条件付け生成に用いる
 
 メモ：図ともう少し解説を入れる
@@ -74,11 +74,13 @@
 
   - 音響信号の特徴と波形は一意に対応するものでなく、位相が異なっていても同様のスペクトルを得る事がある
   - 特徴を正確に捉える為にSTFTによって、スペクトルを計算
-  - スペクトルの分解能を上げる為に、6つ分のウェーブテーブルを連結し、(引用入れる)スペクトル距離を用いて損失とする
+  - スペクトルの分解能を上げる為に、6つ分のウェーブテーブルを連結し、下記のスペクトル距離を用いて損失とする
 
 $$ S(x,y) =  \frac{||STFT(x) - STFT(y)||_F}{||STFT(x)||_F} + log(||STFT(x) -STFT(y)||_1) $$
  
 STFTはShort Term Fourier Transformのことであり、 $\|\|・\|\|_F$ , $\|\|・\|\|_1$ はそれぞれフロべニウスノルム、L1ノルムである。
+
+Engelら[^3]やAntoineら[^4]が使用しているマルチスペクトル距離を参考にしており、本研究ではウェーブテーブル用に1つの窓幅で実施している。
     
 ### 結果
 
