@@ -52,11 +52,10 @@
 
 以下にモデルの概要を示す
 
-<img width="791" alt="スクリーンショット 2023-02-06 23 10 49" src="https://user-images.githubusercontent.com/35299183/216993403-1e603fc5-3f1c-4ceb-ac57-3150aafbcf1b.png">
-
-メモ：図ともう少し解説を入れる
+<img width="612" alt="model" src="https://user-images.githubusercontent.com/35299183/217061772-4cbb9f9d-6951-4b8a-9e3f-fb170f7989f0.png">
 
 #### ①. データセット
+
   - Adventure Kid Research & Technology[^2]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
 
 #### ②. アトリビュートラベルの算出
