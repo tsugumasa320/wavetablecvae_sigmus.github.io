@@ -50,6 +50,7 @@
  
 ### 提案手法
 
+以下にモデルの概要を示す
 <img width="791" alt="スクリーンショット 2023-02-06 22 18 21" src="https://user-images.githubusercontent.com/35299183/216981585-e3923563-6f67-4b8d-9bd7-90918d794c30.png">
 
 #### データセット
