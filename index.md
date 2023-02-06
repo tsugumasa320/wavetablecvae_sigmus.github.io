@@ -68,6 +68,8 @@
   - 波形の時間依存性を捉えるために、 畳み込みとアップサンプリングを行うモデルを設計
   - Encoder-Decoderの全層に条件付けを実施
 
+<!--
+
 WIP
 
 | Function | Layer |  |
@@ -84,6 +86,7 @@ Table 2 Table showing configurations of the VAEs for the image-based datasets. I
 2-dimensional transposed convolutional layer, i: input channels, o: output channels, k: kernel size, s: stride, p: padding, d: dropout probability,
 SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 
+-->
 
 #### ④. 損失関数
 
