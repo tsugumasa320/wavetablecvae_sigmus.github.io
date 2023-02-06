@@ -1,7 +1,7 @@
 <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script> <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 このWebサイトは、第136回音楽情報科学研究発表会 デモ・萌芽・議論セッションで発表の
-“Wavetable合成の為のアトリビュート操作型CVAEエフェクターの検討”についての発表資料です。
+“Wavetable合成の為のアトリビュート操作型CVAEエフェクターの検討”についての発表資料です
 
 ### 目次
 
@@ -60,7 +60,7 @@
   - Adventure Kid Research & Technology[^2]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
 
 #### ②. アトリビュートラベルの算出
-  - ウェーブテーブルの分析は、静的音色について表される音響特徴量を用いる必要がある。
+  - ウェーブテーブルの分析は、静的音色について表される音響特徴量を用いる必要がある
   - Kreković[^3]は、brightness, richness, fullnessの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を使用しデータセットからラベルを抽出する
   - 上記のラベルをCVAEの学習と条件付け生成に用いる
 
@@ -98,8 +98,8 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
  
  $$ S(x,y) =  \frac{||STFT(x) - STFT(y)||_F}{||STFT(x)||_F} + log(||STFT(x) -STFT(y)||_1) $$
  
-   - STFTはShort Term Fourier Transformのことであり、 $\|\|・\|\|_F$ , $\|\|・\|\|_1$ はそれぞれフロべニウスノルム、L1ノルムである。
-   - 上記スペクトル距離は、Engelら[^4]やCaillonら[^5]が使用しているマルチスペクトル距離を参考に設定した。
+   - STFTはShort Term Fourier Transformのことであり、 $\|\|・\|\|_F$ , $\|\|・\|\|_1$ はそれぞれフロべニウスノルム、L1ノルムである
+   - 上記スペクトル距離は、Engelら[^4]やCaillonら[^5]が使用しているマルチスペクトル距離を参考にした
     
 ### 結果
 
