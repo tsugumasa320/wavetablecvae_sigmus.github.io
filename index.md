@@ -29,8 +29,8 @@
 
 #### 背景
   - オーディオ・エフェクトは様々なメディアや音楽制作で重要な役割を果たしている
-  - 深層生成モデルによって、データ・ドリブンな新しいエフェクトが作れないか？
-  - 最も基本的な音生成方式であるウェーブテーブル合成を、CVAEを用いてアップデートする
+  - 近年発展している深層生成モデルによって、データ・ドリブンな新しいエフェクトが作れないか？
+  - 基本的な音生成方式[^1]であるウェーブテーブル合成を、CVAEを用いてアップデートする
     - 知覚に基づいたアトリビュートラベルを音響特長量から算出
     - オシレーターに使用するウェーブテーブルを上記ラベルで条件付け生成
 
@@ -57,11 +57,11 @@
 メモ：図ともう少し解説を入れる
 
 #### ①. データセット
-  - Adventure Kid Research & Technology[^1]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
+  - Adventure Kid Research & Technology[^2]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
 
 #### ②. アトリビュートラベルの算出
   - ウェーブテーブルの分析は、静的音色について表される音響特徴量を用いる必要がある。
-  - Kreković[^2]は、brightness, richness, fullnessの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を使用しデータセットからラベルを抽出する
+  - Kreković[^3]は、brightness, richness, fullnessの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を使用しデータセットからラベルを抽出する
   - 上記のラベルをCVAEの学習と条件付け生成に用いる
 
 #### ③. モデル構成
@@ -99,7 +99,7 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
  $$ S(x,y) =  \frac{||STFT(x) - STFT(y)||_F}{||STFT(x)||_F} + log(||STFT(x) -STFT(y)||_1) $$
  
    - STFTはShort Term Fourier Transformのことであり、 $\|\|・\|\|_F$ , $\|\|・\|\|_1$ はそれぞれフロべニウスノルム、L1ノルムである。
-   - 上記スペクトル距離は、Engelら[^3]やAntoineら[^4]が使用しているマルチスペクトル距離を参考に設定した。
+   - 上記スペクトル距離は、Engelら[^4]やCaillonら[^5]が使用しているマルチスペクトル距離を参考に設定した。
     
 ### 結果
 
@@ -129,4 +129,14 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 ### 謝辞
  This work was supported by Cybozu Labs youth.
 
-### 関連文献
+### 関連文献, 脚注
+
+[^1]: コンピュータ音楽 : 歴史・テクノロジー・アート, Curtis Roads (著), 青柳龍也・小坂直敏・平田圭二・堀内靖雄 (訳・監修), 後藤真孝・引地孝文・平野砂峰旅・松島俊明(訳), 東京電機大学出版局, 2001年
+
+[^2]: "Adventure Kid Research & Technology (AKRT)" https://www.adventurekid.se/akrt/
+
+[^3]: Kreković, Gordan. "DEEP CONVOLUTIONAL OSCILLATOR: SYNTHESIZING WAVEFORMS FROM TIMBRAL DESCRIPTORS." (2022).
+
+[^4]: Engel, Jesse, et al. "DDSP: Differentiable digital signal processing." arXiv preprint arXiv:2001.04643 (2020).
+
+[^5]: Caillon, Antoine, and Philippe Esling. "RAVE: A variational autoencoder for fast and high-quality neural audio synthesis." arXiv preprint arXiv:2111.05011 (2021).
