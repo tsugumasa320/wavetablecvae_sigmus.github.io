@@ -52,23 +52,33 @@
 
 以下にモデルの概要を示す
 
-<img width="791" alt="スクリーンショット 2023-02-06 22 18 21" src="https://user-images.githubusercontent.com/35299183/216981585-e3923563-6f67-4b8d-9bd7-90918d794c30.png">
+<img width="791" alt="スクリーンショット 2023-02-06 23 10 49" src="https://user-images.githubusercontent.com/35299183/216993403-1e603fc5-3f1c-4ceb-ac57-3150aafbcf1b.png">
 
-#### データセット
+メモ：図ともう少し解説を入れる
+
+#### ①. データセット
   - Adventure Kid Research & Technology[^1]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
 
-##### アトリビュートラベルの算出
+#### ②. アトリビュートラベルの算出
   - ウェーブテーブルの分析は、静的音色について表される音響特徴量を用いる必要がある。
   - Kreković[^2]は、brightness, richness, fullnessの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を使用しデータセットからラベルを抽出する
   - 上記のラベルをCVAEの学習と条件付け生成に用いる
 
-メモ：図ともう少し解説を入れる
-
-#### モデル構成
+#### ③. モデル構成
   - 波形の時間依存性を捉えるために、 畳み込みとアップサンプリングを行うモデルを設計
   - Encoder-Decoderの全層に条件付けを実施
 
-#### 損失関数
+WIP
+
+| Function | Layer |  |
+| - | - | - |
+| Encoder | 4-layer Convolutional Network |  - Conv(i=1, o=32, k=6, s=2, p=0) + LReLU + BN<br> - Conv(i=32, o=64, k=8, s=3, p=0) + LReLU + BN<br> - Conv(i=64, o=128, k=7, s=3, p=0) + LReLU + BN<br> - Conv(i=128, o=256, k=6, s=3, p=0) + LReLU + BN |
+|  | 1-layer Liner Network |  - Linear(i=2888, 0=256) + LReLU<br> - Linear(i=256, o=16) × 2 (in parallel) |
+| Decoder | 1-layer Liner Network |  - Linear(i=256, 0=2888) + LReLU |
+|  | 3-layer Upsampling + ResNet Network |  - LReLU + TrConv(i=128, o=64, k=6, s=1, p=0)<br> - LReLU + Conv((i=64, o=64, k=, s=1, p=0) × 3<br> - LReLU + TrConv(i=64, o=32, k=8, s=1, p=0)<br> - LReLU + Conv((i=32, o=32, k=4, s=1, p=0) × 3<br> - LReLU + TrConv(i=32, o=16, k=7, s=1, p=0)<br> - LReLU + Conv((i=16, o=16, k=4, s=1, p=0) × 3<br> - LReLU + TrConv(i=16, o=16, k=7, s=1, p=0)<br> - LReLU + Conv((i=16, o=16, k=4, s=1, p=0) × 3 |
+|  | 1- layer Output Dense: |  - Conv1D(1=8, o=64, k=4, s=1, p=0) + Tanh |
+
+#### ④. 損失関数
 
 <!--
 ![スクリーンショット 2023-02-06 1 20 03](https://user-images.githubusercontent.com/35299183/216831207-e6c03af1-f912-4441-9b13-cbd3cba33e55.png)
@@ -77,13 +87,12 @@
 
   - 音響信号の特徴と波形は一意に対応するものでなく、位相が異なっていても同様のスペクトルを得る事がある
   - 特徴を正確に捉える為にSTFTによって、スペクトルを計算
-  - スペクトルの分解能を上げる為に、6つ分のウェーブテーブルを連結し、下記のスペクトル距離を用いて損失とする
-
-$$ S(x,y) =  \frac{||STFT(x) - STFT(y)||_F}{||STFT(x)||_F} + log(||STFT(x) -STFT(y)||_1) $$
+  - スペクトルの分解能を上げる為に、6つ分のウェーブテーブルを連結し、下記のスペクトル距離を用いて損失とする 
  
-STFTはShort Term Fourier Transformのことであり、 $\|\|・\|\|_F$ , $\|\|・\|\|_1$ はそれぞれフロべニウスノルム、L1ノルムである。
-
-上記スペクトル距離は、Engelら[^3]やAntoineら[^4]が使用しているマルチスペクトル距離を参考に設定した。
+ $$ S(x,y) =  \frac{||STFT(x) - STFT(y)||_F}{||STFT(x)||_F} + log(||STFT(x) -STFT(y)||_1) $$
+ 
+   - STFTはShort Term Fourier Transformのことであり、 $\|\|・\|\|_F$ , $\|\|・\|\|_1$ はそれぞれフロべニウスノルム、L1ノルムである。
+   - 上記スペクトル距離は、Engelら[^3]やAntoineら[^4]が使用しているマルチスペクトル距離を参考に設定した。
     
 ### 結果
 
