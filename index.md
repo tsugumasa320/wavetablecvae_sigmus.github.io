@@ -68,6 +68,9 @@
   - 波形の時間依存性を捉えるために、 畳み込みとアップサンプリングを行うモデルを設計
   - Encoder-Decoderの全層に条件付けを実施
 
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRT0ok0FENYHAwe3cMKkF2YCT3RXQgQ-JesbOZrmqAWxv1nHXNbPwSsCJBorIAatSkBee_erpj7BimU/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
 <!--
 
 WIP
