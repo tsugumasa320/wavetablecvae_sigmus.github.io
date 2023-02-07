@@ -59,7 +59,7 @@
   - Adventure Kid Research & Technology[^2]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
 
 #### ②. アトリビュートラベルの算出
-  - ウェーブテーブルの分析は、静的音色について表される音響特徴量を用いる必要がある
+  - ウェーブテーブルの分析は、静的音色[^6]について表される音響特徴量を用いる必要がある
   - Kreković[^3]は、brightness, richness, fullnessの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を使用しデータセットからラベルを抽出する
   - 上記のラベルをCVAEの学習と条件付け生成に用いる
 
@@ -94,8 +94,8 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 メモ：横長の図にする
 -->
 
-  - 音響信号の特徴と波形は一意に対応するものでなく、位相が異なっていても同様のスペクトルを得る事がある
-  - 特徴を正確に捉える為にSTFTによって、スペクトルを計算
+  - 音響信号は位相が異なっていても同じスペクトルを得る事がある
+  - 特徴を正確に捉える為にSTFTを行い、スペクトルからロスを計算
   - スペクトルの分解能を上げる為に、6つ分のウェーブテーブルを連結し、下記のスペクトル距離を用いて損失とする 
  
  $$ S(x,y) =  \frac{||STFT(x) - STFT(y)||_F}{||STFT(x)||_F} + log(||STFT(x) -STFT(y)||_1) $$
@@ -122,7 +122,7 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
     - CVAEを用いたウェーブテーブルの再構成と条件付けにおいて、更なる検証が必要ではあるが再構成と条件付け生成において、一定の成果を得る事が出来た
 
 #### 今後の展望
-  - 更なる再構成品質向上を可能にするモデル構成
+  - 更なる再構成品質向上を可能にするモデル構成の検討
   - 新しいエフェクト創出の為の、ラベル抽出手法の探索
   - UIの検討（下記は、検討中のUIイメージ)
 
@@ -142,3 +142,5 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 [^4]: Engel, Jesse, et al. "DDSP: Differentiable digital signal processing." arXiv preprint arXiv:2001.04643 (2020).
 
 [^5]: Caillon, Antoine, and Philippe Esling. "RAVE: A variational autoencoder for fast and high-quality neural audio synthesis." arXiv preprint arXiv:2111.05011 (2021).
+
+[^6]: 静的音色とは、時間的な変化のない音(定常音)について、周波数スペクトルによって規定される音
