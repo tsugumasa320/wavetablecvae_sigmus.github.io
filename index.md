@@ -53,7 +53,7 @@
 
 以下にモデルの概要を示す
 
-<img width="612" alt="model" src="https://user-images.githubusercontent.com/35299183/217061772-4cbb9f9d-6951-4b8a-9e3f-fb170f7989f0.png">
+<img width="873" alt="スクリーンショット 2023-02-08 0 08 49" src="https://user-images.githubusercontent.com/35299183/217283177-b89dc872-1c90-44c6-a22c-b945da8e7e17.png">
 
 ### ①. データセット
 
