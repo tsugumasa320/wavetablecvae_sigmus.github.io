@@ -96,12 +96,12 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 -->
 
   - 音響信号は位相が異なっていても同じスペクトルを得る事がある
-  - 特徴を正確に捉える為にSTFTを行い、スペクトルからロスを計算
+  - 特徴を正確に捉える為にSTFT[^7]を行い、スペクトルからロスを計算
   - スペクトルの分解能を上げる為に、6つ分のウェーブテーブルを連結し、下記のスペクトル距離を用いる 
  
  $$ S(x,y) =  \frac{||STFT(x) - STFT(y)||_F}{||STFT(x)||_F} + log(||STFT(x) -STFT(y)||_1) $$
  
-   - STFTはShort Term Fourier Transformのことであり、 $\|\|・\|\|_F$ , $\|\|・\|\|_1$ はそれぞれフロべニウスノルム、L1ノルムである
+   - $\|\|・\|\|_F$ , $\|\|・\|\|_1$ はそれぞれフロべニウスノルム、L1ノルムである
    - 上記スペクトル距離は、Engelら[^4]やCaillonら[^5]が使用しているマルチスペクトル距離を参考にした
     
 ### 結果
@@ -145,3 +145,5 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 [^5]: Caillon, Antoine, and Philippe Esling. "RAVE: A variational autoencoder for fast and high-quality neural audio synthesis." arXiv preprint arXiv:2111.05011 (2021).
 
 [^6]: 静的音色とは、時間的な変化のない音(定常音)について、周波数スペクトルによって規定される音
+
+[^7]: STFTとは、 Short Term Fourier Transformのこと
