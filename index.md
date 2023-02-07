@@ -15,8 +15,8 @@
 
 ### 目的
 
-- 深層生成モデルによるデータ・ドリブンなオーディオ・エフェクトの創出
-- "Wavetable effector"を提案
+- 深層生成モデルによる**データ・ドリブンなオーディオ・エフェクト**の創出
+- **"Wavetable effector"**を提案
 
 <img width="805" alt="スクリーンショット 2023-02-07 23 41 13" src="https://user-images.githubusercontent.com/35299183/217276003-bf56ca9b-ea70-4748-a261-0b7e8a824d72.png">
 
@@ -30,11 +30,11 @@
   - オーディオ・エフェクトは様々なメディアや音楽制作で重要な役割を果たしている
   - 近年発展している深層生成モデルによって、データ・ドリブンな新しいエフェクトが作れないか？
   - 基本的な音生成方式[^1]であるウェーブテーブル合成を、CVAEを用いてアップデートする
-    - 知覚に基づいたアトリビュートラベルを音響特長量から算出
+    - 知覚に関連するアトリビュートラベルを音響特長量から算出
     - オシレーターに使用するウェーブテーブルを上記ラベルで条件付け生成
 
 ## 前提知識
-  
+
 ### ウェーブテーブル合成
   - デジタル音響合成の基礎となる技術
   - 任意の波形1周期分の情報を保存(以下、ウェーブテーブル)
@@ -42,11 +42,11 @@
 
 #### 参考動画
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  
+
 ### CVAE(Conditional Variational Autoencoder)
   - Encoder-Decoderネットワークに基づいた、確率的生成モデルの一種
   - 入力データに対して条件付きで生成を行うことが可能
- 
+
 ## 提案手法
 
 <img width="873" alt="スクリーンショット 2023-02-08 0 18 08" src="https://user-images.githubusercontent.com/35299183/217285598-f74b154f-e264-478a-b161-34dd1acd44e0.png">
@@ -68,13 +68,13 @@
 
 WIP
 
-| Function | Layer |  |
-| - | - | - |
-| Encoder | 4-layer Convolutional Network |  - Conv(i=1, o=32, k=6, s=2, p=0) + LReLU + BN<br> - Conv(i=32, o=64, k=8, s=3, p=0) + LReLU + BN<br> - Conv(i=64, o=128, k=7, s=3, p=0) + LReLU + BN<br> - Conv(i=128, o=256, k=6, s=3, p=0) + LReLU + BN |
-|  | 1-layer Liner Network |  - Linear(i=2888, 0=256) + LReLU<br> - Linear(i=256, o=16) × 2 (in parallel) |
-| Decoder | 1-layer Liner Network |  - Linear(i=256, 0=2888) + LReLU |
-|  | 3-layer Upsampling + ResNet Network |  - LReLU + TrConv(i=128, o=64, k=6, s=1, p=0)<br> - LReLU + Conv((i=64, o=64, k=, s=1, p=0) × 3<br> - LReLU + TrConv(i=64, o=32, k=8, s=1, p=0)<br> - LReLU + Conv((i=32, o=32, k=4, s=1, p=0) × 3<br> - LReLU + TrConv(i=32, o=16, k=7, s=1, p=0)<br> - LReLU + Conv((i=16, o=16, k=4, s=1, p=0) × 3<br> - LReLU + TrConv(i=16, o=16, k=7, s=1, p=0)<br> - LReLU + Conv((i=16, o=16, k=4, s=1, p=0) × 3 |
-|  | 1- layer Output Dense: |  - Conv1D(1=8, o=64, k=4, s=1, p=0) + Tanh |
+| Function | Layer                               |                                                                                                                                                                                                                                                                                                                                                                                                         |
+| -------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Encoder  | 4-layer Convolutional Network       | - Conv(i=1, o=32, k=6, s=2, p=0) + LReLU + BN<br> - Conv(i=32, o=64, k=8, s=3, p=0) + LReLU + BN<br> - Conv(i=64, o=128, k=7, s=3, p=0) + LReLU + BN<br> - Conv(i=128, o=256, k=6, s=3, p=0) + LReLU + BN                                                                                                                                                                                               |
+|          | 1-layer Liner Network               | - Linear(i=2888, 0=256) + LReLU<br> - Linear(i=256, o=16) × 2 (in parallel)                                                                                                                                                                                                                                                                                                                             |
+| Decoder  | 1-layer Liner Network               | - Linear(i=256, 0=2888) + LReLU                                                                                                                                                                                                                                                                                                                                                                         |
+|          | 3-layer Upsampling + ResNet Network | - LReLU + TrConv(i=128, o=64, k=6, s=1, p=0)<br> - LReLU + Conv((i=64, o=64, k=, s=1, p=0) × 3<br> - LReLU + TrConv(i=64, o=32, k=8, s=1, p=0)<br> - LReLU + Conv((i=32, o=32, k=4, s=1, p=0) × 3<br> - LReLU + TrConv(i=32, o=16, k=7, s=1, p=0)<br> - LReLU + Conv((i=16, o=16, k=4, s=1, p=0) × 3<br> - LReLU + TrConv(i=16, o=16, k=7, s=1, p=0)<br> - LReLU + Conv((i=16, o=16, k=4, s=1, p=0) × 3 |
+|          | 1- layer Output Dense:              | - Conv1D(1=8, o=64, k=4, s=1, p=0) + Tanh                                                                                                                                                                                                                                                                                                                                                               |
 
 (下記の様な解説入れる）
 
@@ -93,13 +93,13 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 
   - 音響信号は位相が異なっていても同じスペクトルを得る事がある
   - 特徴を正確に捉える為にSTFT[^7]を行い、スペクトルからロスを計算
-  - スペクトルの分解能を上げる為に、6つ分のウェーブテーブルを連結し、下記のスペクトル距離を用いる 
- 
+  - スペクトルの分解能を上げる為に、**6つ分のウェーブテーブルを連結**し、下記のスペクトル距離を用いる
+
  $$ S(x,y) =  \frac{||STFT(x) - STFT(y)||_F}{||STFT(x)||_F} + log(||STFT(x) -STFT(y)||_1) $$
- 
+
    - $\|\|・\|\|_F$ , $\|\|・\|\|_1$ はそれぞれフロべニウスノルム、L1ノルムである
    - 上記スペクトル距離は、Engelら[^4]やCaillonら[^5]が使用しているマルチスペクトル距離を参考にした
-    
+
 ## 結果
 
 ### 再構成品質
