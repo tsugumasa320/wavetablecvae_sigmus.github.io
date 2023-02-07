@@ -36,9 +36,9 @@
 ## 前提知識
   
 ### ウェーブテーブル合成
+  - デジタル音響合成の基礎となる技術
   - 任意の波形1周期分の情報を保存(以下、ウェーブテーブル)
   - ウェーブテーブルの繰り返し速度を変える事でオシレーターとして任意の音高を出力する
-  - デジタル音響合成の基礎となる技術であり、多くのシンセサイザーで用いられる
 
 #### 参考動画
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
