@@ -3,7 +3,7 @@
 このWebサイトは、第136回音楽情報科学研究発表会 デモ・萌芽・議論セッションで発表の
 “Wavetable合成の為のアトリビュート操作型CVAEエフェクターの検討”についての発表資料です
 
-### 目次
+## 目次
 
 - [序論](#序論)
 - [前提知識](#前提知識)
@@ -11,16 +11,16 @@
 - [結果](#結果)
 - [まとめ](#まとめ)
 
-### 序論
+## 序論
 
-#### 目的
+### 目的
 
 - 深層生成モデルによるデータ・ドリブンなオーディオ・エフェクトの創出
 - "Wavetable effector"を提案
 
 <img width="805" alt="スクリーンショット 2023-02-07 23 41 13" src="https://user-images.githubusercontent.com/35299183/217276003-bf56ca9b-ea70-4748-a261-0b7e8a824d72.png">
 
-##### ユースケース案
+### ユースケース案
 
   ①. 使用したいウェーブテーブルを選び、モデルに入力
   
@@ -28,43 +28,43 @@
   
   ③. 出力されたウェーブテーブルを用いて演奏を行う
 
-#### 背景
+### 背景
   - オーディオ・エフェクトは様々なメディアや音楽制作で重要な役割を果たしている
   - 近年発展している深層生成モデルによって、データ・ドリブンな新しいエフェクトが作れないか？
   - 基本的な音生成方式[^1]であるウェーブテーブル合成を、CVAEを用いてアップデートする
     - 知覚に基づいたアトリビュートラベルを音響特長量から算出
     - オシレーターに使用するウェーブテーブルを上記ラベルで条件付け生成
 
-### 前提知識
+## 前提知識
   
-#### ウェーブテーブル合成
+### ウェーブテーブル合成
   - 任意の波形1周期分の情報を保存(以下、ウェーブテーブル)
   - ウェーブテーブルの繰り返し速度を変える事でオシレーターとして任意の音高を出力する
   - デジタル音響合成の基礎となる技術であり、多くのシンセサイザーで用いられる
 
-##### 参考動画
+#### 参考動画
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   
-#### CVAE(Conditional Variational Autoencoder)
+### CVAE(Conditional Variational Autoencoder)
   - Encoder-Decoderネットワークに基づいた、確率的生成モデルの一種
   - 入力データに対して条件付きで生成を行うことが可能
  
-### 提案手法
+## 提案手法
 
 以下にモデルの概要を示す
 
 <img width="612" alt="model" src="https://user-images.githubusercontent.com/35299183/217061772-4cbb9f9d-6951-4b8a-9e3f-fb170f7989f0.png">
 
-#### ①. データセット
+### ①. データセット
 
   - Adventure Kid Research & Technology[^2]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
 
-#### ②. アトリビュートラベルの算出
+### ②. アトリビュートラベルの算出
   - ウェーブテーブルの分析は、静的音色[^6]について表される音響特徴量を用いる必要がある
   - Kreković[^3]は、brightness, richness, fullnessの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を使用しデータセットからラベルを抽出する
   - 上記のラベルをCVAEの学習と条件付け生成に用いる
 
-#### ③. モデル構成
+### ③. モデル構成
   - 波形の時間依存性を捉えるために、 畳み込みとアップサンプリングを行うモデルを設計
   - Encoder-Decoderの全層に条件付けを実施
 
@@ -88,7 +88,7 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 
 -->
 
-#### ④. 損失関数
+### ④. 損失関数
 
 <!--
 ![スクリーンショット 2023-02-06 1 20 03](https://user-images.githubusercontent.com/35299183/216831207-e6c03af1-f912-4441-9b13-cbd3cba33e55.png)
@@ -104,9 +104,9 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
    - $\|\|・\|\|_F$ , $\|\|・\|\|_1$ はそれぞれフロべニウスノルム、L1ノルムである
    - 上記スペクトル距離は、Engelら[^4]やCaillonら[^5]が使用しているマルチスペクトル距離を参考にした
     
-### 結果
+## 結果
 
-#### 再構成品質
+### 再構成品質
   - テストデータにおいて、再構成品質と条件付け生成の結果を確認
   - (チャンピオンデータ3つ選定して載せる)
 
@@ -116,23 +116,23 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 
 <img width="653" alt="スクリーンショット 2023-02-06 1 43 32" src="https://user-images.githubusercontent.com/35299183/216832368-e7272d40-264b-4b73-beea-123b513a2be8.png">
 
-### まとめ
+## まとめ
 
-#### 結論
+### 結論
   - ウェーブテーブル合成における新しいエフェクトの可能性を示した
     - CVAEを用いたウェーブテーブルの再構成と条件付けにおいて、更なる検証が必要ではあるが再構成と条件付け生成において、一定の成果を得る事が出来た
 
-#### 今後の展望
+### 今後の展望
   - 更なる再構成品質向上を可能にするモデル構成の検討
   - 新しいエフェクト創出の為の、ラベル抽出手法の探索
   - UIの検討（下記は、検討中のUIイメージ)
 
 <img width="1502" alt="スクリーンショット 2023-02-06 1 55 14" src="https://user-images.githubusercontent.com/35299183/216832970-d43c6374-f9c5-40db-af94-c7c90889d79e.png">
 
-### 謝辞
+## 謝辞
  This work was supported by Cybozu Labs youth.
 
-### 関連文献, 脚注
+## 関連文献, 脚注
 
 [^1]: コンピュータ音楽 : 歴史・テクノロジー・アート, Curtis Roads (著), 青柳龍也・小坂直敏・平田圭二・堀内靖雄 (訳・監修), 後藤真孝・引地孝文・平野砂峰旅・松島俊明(訳), 東京電機大学出版局, 2001年
 
