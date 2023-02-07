@@ -13,8 +13,6 @@
 
 ## 概要
 
-<img width="805" alt="スクリーンショット 2023-02-07 23 41 13" src="https://user-images.githubusercontent.com/35299183/217276003-bf56ca9b-ea70-4748-a261-0b7e8a824d72.png">
-
 本研究は、CVAE(Conditional Variational AutoEncoder)1により波形1周期分のデータ(以下、ウェーブテーブル)の再構成と条件付け生成を行い、
 ウェーブテーブル合成におけるデータ・ドリブンなオーディオ・エフェクト**”Wavetable effector”**を提案する
 
@@ -36,6 +34,8 @@
 ## 序論
 
 ### 目的
+
+<img width="805" alt="スクリーンショット 2023-02-07 23 41 13" src="https://user-images.githubusercontent.com/35299183/217276003-bf56ca9b-ea70-4748-a261-0b7e8a824d72.png">
 
 - 深層生成モデルによる**データ・ドリブンなオーディオ・エフェクト**の創出
 - **"Wavetable effector"**を提案
