@@ -121,6 +121,7 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 ### 今後の展望
   - 更なる再構成品質向上を可能にするモデル構成の検討
   - 新しいエフェクト創出の為の、ラベル抽出手法の探索
+  - AM/FM/加算/減算合成やLFOなどへの応用の検討
   - UIの検討（下記は、検討中のUIイメージ)
 
 <img width="1502" alt="スクリーンショット 2023-02-06 1 55 14" src="https://user-images.githubusercontent.com/35299183/216832970-d43c6374-f9c5-40db-af94-c7c90889d79e.png">
