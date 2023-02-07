@@ -16,10 +16,9 @@
 #### 目的
 
 - 深層生成モデルによるデータ・ドリブンなオーディオ・エフェクトの創出
+- "Wavetable effector"を提案
 
-<img width="714" alt="スクリーンショット 2023-02-07 23 28 42" src="https://user-images.githubusercontent.com/35299183/217272530-b2e08626-9695-4677-b7f4-036d1e2e5064.png">
-
-メモ：ウェーブテーブル合成全体のフローも入れ込む。ユースケース案と対応するような注釈を入れる
+<img width="772" alt="スクリーンショット 2023-02-07 23 36 24" src="https://user-images.githubusercontent.com/35299183/217274643-dc1d33dd-50c1-4fad-82e1-d1f38b82cdd2.png">
 
 ##### ユースケース案
 
