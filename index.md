@@ -54,11 +54,11 @@
   - 任意の波形1周期分の情報を保存
   - Wavetableの繰り返し速度を変える事で任意の音高を出力する
 
-### Waveshaping Synthesis
-  - (WIP)
-
 #### 参考動画
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### Waveshaping Synthesis
+  - (WIP)
 
 ### CVAE(Conditional Variational Autoencoder)
   - Encoder-Decoderネットワークに基づいた、確率的生成モデルの一種
