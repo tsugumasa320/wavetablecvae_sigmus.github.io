@@ -13,19 +13,17 @@
 
 ## 概要
 
-本研究は、CVAE(Conditional Variational AutoEncoder)1により波形1周期分のデータ(以下、ウェーブテーブル)の再構成と条件付け生成を行い、
-ウェーブテーブル合成におけるデータ・ドリブンなオーディオ・エフェクト**”Wavetable effector”**を提案する
+本研究は、CVAE(Conditional Variational AutoEncoder)1により波形1周期分のデータ(以下、Wavetable)の再構成と条件付け生成を行い、
+**"アトリビュート操作型のWaveshaping synthesis**"を提案する
 
 教師ラベルとしては、音響特徴を基に、brightness, richness, fullnessを表すアトリビュートラベルを算出し、
 波形の時間依存性を捉えるために畳み込みとアップサンプリングを用いたCVAEを設計した。
 
 データセットは、Adventure Kid Research & Technology[^2]が提供している
-モノラルのウェーブテーブル(Single Cycle Waveform)4158件を用いて学習を行い、
+モノラルのSingle Cycle Waveform 4158件を用いて学習を行い、
 アトリビュートラベルを条件付けに用いてウェーブテーブルの生成を行う
 
 テストデータにおいて、再構成の忠実度と正規化されたアトリビュートの変化を定性的・定量的に確認した
-
-
 
 ## 序論
 
@@ -34,27 +32,30 @@
 <img width="805" alt="スクリーンショット 2023-02-07 23 41 13" src="https://user-images.githubusercontent.com/35299183/217276003-bf56ca9b-ea70-4748-a261-0b7e8a824d72.png">
 
 - 深層生成モデルによる**データ・ドリブンなオーディオ・エフェクト**の創出
-- **"Wavetable effector"**を提案
+- **"アトリビュート操作型のWaveshaping Synthesis"**を提案
 
 ### ユースケース案
 
-  - ①. 使用したいウェーブテーブルを選び、モデルに入力
+  - ①. 使用したいWavetableを選び、モデルに入力
   - ②. つまみ(アトリビュートラベル)を動かし、音色を調整する
-  - ③. 出力されたウェーブテーブルを用いて演奏を行う
+  - ③. 出力されたWavetableを用いて演奏を行う
 
 ### 背景
   - オーディオ・エフェクトは様々なメディアや音楽制作で重要な役割を果たしている
   - 近年発展している深層生成モデルによって、データ・ドリブンな新しいエフェクトが作れないか？
-  - 基本的な音生成方式[^1]であるウェーブテーブル合成を、CVAEを用いてアップデートする
+  - 基本的な音生成方式である[^1]Wavetable Synthesis及びWaveshaping Synthesisを、CVAEを用いてアップデートする
     - 知覚に関連するアトリビュートラベルを音響特長量から算出
-    - オシレーターに使用するウェーブテーブルを上記ラベルで条件付け生成
+    - オシレーターに使用するWavetableを上記ラベルで条件付け生成
 
 ## 前提知識
 
-### ウェーブテーブル合成
+### Wavetable Synthesis
   - デジタル音響合成の基礎となる技術
   - 任意の波形1周期分の情報を保存
-  - ウェーブテーブルの繰り返し速度を変える事で任意の音高を出力する
+  - Wavetableの繰り返し速度を変える事で任意の音高を出力する
+
+### Waveshaping Synthesis
+  - (WIP)
 
 #### 参考動画
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -69,10 +70,10 @@
 
 ### ①. データセット
 
-  - Adventure Kid Research & Technology[^2]が提供しているモノラルのウェーブテーブル(Single Cycle Waveform)4158件を使用
+  - Adventure Kid Research & Technology[^2]が提供しているモノラルのSingle Cycle Waveform 4158件を使用
 
 ### ②. アトリビュートラベルの算出
-  - ウェーブテーブルの分析は、静的音色[^6]について表される音響特徴量を用いる必要がある
+  - Wavetableの分析は、静的音色[^6]について表される音響特徴量を用いる必要がある
   - Kreković[^3]は、brightness, richness, fullnessの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を使用しデータセットからラベルを抽出する
   - 上記のラベルをCVAEの学習と条件付け生成に用いる
 
