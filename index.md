@@ -14,14 +14,14 @@
 ## 概要
 
 本研究は、CVAE(Conditional Variational AutoEncoder)1により波形1周期分のデータ(以下、Wavetable)の再構成と条件付け生成を行い、
-**"アトリビュート操作型のWaveshaping synthesis**"を提案する
+予め算出した意味的な教師ラベルによって操作を行う、**"Semantic Neural Waveshaping Synthesis**"を提案する
 
-教師ラベルとしては、音響特徴を基に、brightness, richness, fullnessを表すアトリビュートラベルを算出し、
+教師ラベルは、音響特徴を基に、brightness, richness, fullnessを表すアトリビュートラベルを算出し、
 波形の時間依存性を捉えるために畳み込みとアップサンプリングを用いたCVAEを設計した。
 
 データセットは、Adventure Kid Research & Technology[^2]が提供している
 モノラルのSingle Cycle Waveform 4158件を用いて学習を行い、
-アトリビュートラベルを条件付けに用いてウェーブテーブルの生成を行う
+教師ラベルを条件付けに用いてWavetableの生成を行う
 
 テストデータにおいて、再構成の忠実度と正規化されたアトリビュートの変化を定性的・定量的に確認した
 
