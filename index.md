@@ -1,11 +1,7 @@
 <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script> <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-<!--
 このWebサイトは、第136回音楽情報科学研究発表会 デモ・萌芽・議論セッションで発表の
 “Wavetable合成の為のアトリビュート操作型CVAEエフェクターの検討”についての発表資料です
--->
-
-## Semantic Control of Waveshaping Synthesis
 
 ## 目次
 
@@ -18,7 +14,7 @@
 ## 概要
 
 本研究は、CVAE(Conditional Variational AutoEncoder)1により波形1周期分のデータ(以下、Wavetable)の再構成と条件付け生成を行い、
-予め算出した意味的な教師ラベルによって操作を行う、**"Semantic Control of Waveshaping Synthesis**"を提案する
+予め算出した意味的な教師ラベルによって操作を行う、**"Wavetable Effector**"を提案する
 
 教師ラベルは、音響特徴を基に、brightness, richness, fullnessを表すアトリビュートラベルを算出し、
 波形の時間依存性を捉えるために畳み込みとアップサンプリングを用いたCVAEを設計した。
@@ -36,12 +32,12 @@
 ![SIGMUS_figure](https://user-images.githubusercontent.com/35299183/218489944-86572350-a09e-41e6-960f-27f814f34a84.png)
 
 - 深層生成モデルによる**データ・ドリブンなオーディオ・エフェクト**の創出
-- **"Semantic control of Waveshaping Synthesis"**を提案
+- 意味的なラベルによってWavetableを操作する**"Wavetable Effector"**を提案
 
 ### 背景
   - シンセサイザーは様々なメディアや音楽制作で重要な役割を果たしている
-  - 近年発展している深層生成モデルによって、意味的な音の生成やエフェクトが作れないか？
-  - 基本的な音生成方式である[^1]Wavetable Synthesis及びWaveshaping Synthesisを、CVAEを用いてアップデートする
+  - 近年発展している深層生成モデルによって、データ・ドリブンかつ意味的なエフェクトが作れないか？
+  - 基本的な音生成方式である[^1]Wavetable Synthesisを、CVAEを用いてアップデートする
     - 知覚に関連するラベルを音響特長量から算出
     - オシレーターに使用するWavetableを上記ラベルで条件付け生成
 
@@ -61,9 +57,6 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 </details>
-
-### Waveshaping Synthesis
-  - (WIP)
 
 ### CVAE(Conditional Variational Autoencoder)
   - Encoder-Decoderネットワークに基づいた、確率的生成モデルの一種
