@@ -29,10 +29,10 @@
 
 ### 目的
 
-<img width="665" alt="スクリーンショット 2023-02-13 22 50 40" src="https://user-images.githubusercontent.com/35299183/218476495-f20910ad-40b3-4567-89d4-aa847060032c.png">
+![SIGMUS_figure](https://user-images.githubusercontent.com/35299183/218489944-86572350-a09e-41e6-960f-27f814f34a84.png)
 
 - 深層生成モデルによる**データ・ドリブンなオーディオ・エフェクト**の創出
-- **"Semantic Neural Waveshaping Synthesis"**を提案
+- **"Semantic control of Waveshaping Synthesis"**を提案
 
 ### ユースケース案
 
