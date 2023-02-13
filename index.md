@@ -1,7 +1,11 @@
 <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script> <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
+<!--
 このWebサイトは、第136回音楽情報科学研究発表会 デモ・萌芽・議論セッションで発表の
 “Wavetable合成の為のアトリビュート操作型CVAEエフェクターの検討”についての発表資料です
+-->
+
+## Semantic Control of Waveshaping Synthesis
 
 ## 目次
 
@@ -34,15 +38,9 @@
 - 深層生成モデルによる**データ・ドリブンなオーディオ・エフェクト**の創出
 - **"Semantic control of Waveshaping Synthesis"**を提案
 
-### ユースケース案
-
-  - ①. 使用したいWavetableを選び、モデルに入力
-  - ②. つまみ(Semantic label)を動かし、音色を調整する
-  - ③. 出力されたWavetableを用いて演奏を行う
-
 ### 背景
-  - オーディオ・エフェクトは様々なメディアや音楽制作で重要な役割を果たしている
-  - 近年発展している深層生成モデルによって、データ・ドリブンな新しいエフェクトが作れないか？
+  - シンセサイザーは様々なメディアや音楽制作で重要な役割を果たしている
+  - 近年発展している深層生成モデルによって、意味的な音の生成やエフェクトが作れないか？
   - 基本的な音生成方式である[^1]Wavetable Synthesis及びWaveshaping Synthesisを、CVAEを用いてアップデートする
     - 知覚に関連するラベルを音響特長量から算出
     - オシレーターに使用するWavetableを上記ラベルで条件付け生成
@@ -57,8 +55,12 @@
   - 任意の波形1周期分の情報を保存
   - Wavetableの繰り返し速度を変える事で任意の音高を出力する
 
-#### 参考動画
+<details>
+<summary>参考動画</summary>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</details>
 
 ### Waveshaping Synthesis
   - (WIP)
