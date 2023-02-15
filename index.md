@@ -51,7 +51,7 @@
   - Wavetableの繰り返し速度を変える事で任意の音高を出力する
 
 <details>
-<summary>>参考動画(クリックすると開きます)</summary>
+<summary><span style="color: ｂlue; ">>参考動画(クリックすると開きます)</span></summary>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
