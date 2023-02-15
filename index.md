@@ -1,7 +1,8 @@
 <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script> <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-このWebサイトは、第136回音楽情報科学研究発表会 デモ・萌芽・議論セッションで発表の
-“Wavetable合成の為のアトリビュート操作型CVAEエフェクターの検討”についての発表資料です
+<!--このWebサイトは、第136回音楽情報科学研究発表会 デモ・萌芽・議論セッションで発表の
+“Wavetable合成の為のアトリビュート操作型CVAEエフェクターの検討”についての発表資料です-->
+## Wavetable合成の意味的な音色操作についての検討: SEMANTIC CONTROL OF WAVETABLE SYNTHESIS
 
 ## 目次
 
@@ -13,7 +14,7 @@
 
 ## 概要
 
-本研究では、ウェーブテーブル合成という音声信号の生成方式において、深層生成モデルを用いて音色の操作を行う手法を提案する。
+本研究では、ウェーブテーブル合成という音声信号の生成方式において、深層生成モデルを用いて意味的な音色操作を行う手法を提案する。
 ウェーブテーブル合成とは、短い波形の断片を周期的に繰り返して音声信号を生成する方式である。
 
 提案手法では、Conditional Variational Autoencoder (CVAE) [^1]を用いて、ウェーブテーブルの再構成と条件付け生成を行う。
