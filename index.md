@@ -80,9 +80,11 @@
   - Adventure Kid Research & Technology[^2]が提供しているモノラルのSingle Cycle Waveform 4158件を使用
 
 ### ②. アトリビュートラベルの算出
-  - Wavetableの分析は、静的音色[^6]について表される音響特徴量を用いる必要がある
+  - Wavetableの分析は、静的音色について表される音響特徴量を用いる必要がある
   - Kreković[^3]は、bright, warm, richの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を使用しデータセットからラベルを抽出する
   - 上記のラベルをCVAEの学習と条件付け生成に用いる
+
+静的音色:時間的な変化のない音(定常音)について、周波数スペクトルによって規定される音
 
 ### ③. モデル構成
   - 波形の時間依存性を捉えるために、 畳み込みとアップサンプリングを行うモデルを設計
@@ -116,7 +118,7 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 -->
 
   - 音響信号は位相が異なっていても同じスペクトルを得る事がある
-  - 特徴を正確に捉える為にSTFT[^7]を行い、スペクトルからロスを計算
+  - 特徴を正確に捉える為にSTFT(Short Term Fourier Transform)を行い、スペクトルからロスを計算
   - スペクトルの分解能を上げる為に、6つ分のウェーブテーブルを連結し、下記のスペクトル距離を用いる
 
  $$ S(x,y) =  \frac{||STFT(x) - STFT(y)||_F}{||STFT(x)||_F} + log(||STFT(x) -STFT(y)||_1) $$
@@ -164,7 +166,3 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 [^4]: Engel, Jesse, et al. "DDSP: Differentiable digital signal processing." arXiv preprint arXiv:2001.04643 (2020).
 
 [^5]: Caillon, Antoine, and Philippe Esling. "RAVE: A variational autoencoder for fast and high-quality neural audio synthesis." arXiv preprint arXiv:2111.05011 (2021).
-
-[^6]: 静的音色とは、時間的な変化のない音(定常音)について、周波数スペクトルによって規定される音
-
-[^7]: STFTとは、 Short Term Fourier Transformのこと
