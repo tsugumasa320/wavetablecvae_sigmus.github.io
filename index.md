@@ -2,7 +2,7 @@
 
 <!--このWebサイトは、第136回音楽情報科学研究発表会 デモ・萌芽・議論セッションで発表の
 “Wavetable合成の為のアトリビュート操作型CVAEエフェクターの検討”についての発表資料です-->
-## Wavetable合成の意味的な音色操作についての検討: SEMANTIC CONTROL OF WAVETABLE SYNTHESIS
+## CVAEを用いたウェーブテーブル合成の意味的な音色操作についての検討: SEMANTIC CONTROL OF WAVETABLE SYNTHESIS USING CVAE
 
 ## 目次
 
