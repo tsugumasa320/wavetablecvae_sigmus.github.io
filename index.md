@@ -30,7 +30,7 @@
 ### 目的
 
 - 深層生成モデルにより**データ・ドリブンな音色操作**の実施
-- 意味的なラベルによってWavetableを操作する**"Wavetable Effector"**を提案
+- **意味的なラベル**によってWavetableを操作する**"Wavetable Effector"**を提案
 
 ### ユースケース案
 
