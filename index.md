@@ -155,7 +155,7 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 ## 謝辞
  This work was supported by Cybozu Labs youth.
 
-## 関連文献, 脚注
+## 関連文献
 
 [^1]: Kingma, Durk P., et al. “Semi-supervised learning with deep generative models.” Advances in neural information processing systems 27 (2014).
 
