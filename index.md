@@ -79,7 +79,7 @@
 
   - Adventure Kid Research & Technology[^2]が提供しているモノラルのSingle Cycle Waveform 4158件を使用
 
-### ②. アトリビュートラベルの算出
+### ②. 教師ラベルの算出
   - Wavetableの分析は、静的音色について表される音響特徴量を用いる必要がある
   - Kreković[^3]は、bright, warm, richの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を使用しデータセットからラベルを抽出する
   - 上記のラベルをCVAEの学習と条件付け生成に用いる
