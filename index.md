@@ -130,7 +130,7 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 ### 再構成品質
   - テストデータにおいて、再構成品質と条件付け生成の結果を確認
   - 16個くらいの再構成結果の表(テストデータからランダムに)
-  - (5つ程度選定して載せる.何か簡単なフレーズの音声を載せる)
+  - (3つ程度選定して載せる.何か簡単なフレーズの音声を載せる)
 
 <img width="653" alt="スクリーンショット 2023-02-06 1 44 42" src="https://user-images.githubusercontent.com/35299183/216832429-6054285c-20f1-4cb3-a086-027fc3e6b114.png">
 
