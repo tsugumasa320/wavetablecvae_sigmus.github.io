@@ -89,18 +89,24 @@
   - 波形の時間依存性を捉えるために、 畳み込みとアップサンプリングを行うモデルを設計
   - 潜在変数の入力と出力部分で条件付けを実施
 
+<details>
+<summary><span style="color: ｂlue; ">>モデル構成詳細(クリックすると開きます)</span></summary>
+
+| Function | Layer |  |
+| - | - | - |
+| Encoder | 6-layer Convolutional Network | - Conv(i=1, o=16, k=3, s=1) + LReLU + BN<br> - Conv(i=16, o=32, k=7, s=3) + LReLU + BN<br> - Conv(i=32, o=64, k=7, s=3) + LReLU + BN<br> - Conv(i=64, o=128, k=7, s=3) + LReLU + BN<br> - Conv(i=128, o=256, k=7, s=3) + LReLU + BN<br> - Conv(i=256, o=512, k=5, s=2) + LReLU + BN |
+|  | 2-layer Liner Network | - Linear(i=512, 0=64) + LReLU<br> - Linear(i=64+4(condition label), o=8) × 2 (in parallel) |
+| Decoder | 2-layer Liner Network | - Linear(i=8+4(condition label), 0=64) + LReLU<br>- Linear(i=64, 0=512) + LReLU |
+|  | 6-layer Upsampling +ResBlock | - LReLU + TrConv(i=512, o=256, k=5, s=2) + ResBlock<br>- LReLU + TrConv(i=256, o=128, k=8, s=3) + ResBlock<br>- LReLU + TrConv(i=128, o=64, k=8, s=3) + ResBlock<br>- LReLU + TrConv(i=64, o=32, k=6, s=3) + ResBlock<br>- LReLU + TrConv(i=32, o=16, k=7, s=3) + ResBlock<br>- LReLU + TrConv(i=16, o=8, k=3, s=1) + ResBlock |
+|  | (Residual Block) |  - LReLU + Conv((k=1, s=1) × 3 |
+|  | 1- layer Output Dense: | - Conv1D(i=8, o=1, k=1, s=1) + Tanh |
+  
+パディングは全て0,  i: input channels, o: output channels, k: kernel size, s: stride ReLU: Rectifier Linear Unit
+  
+</details>
+
+
 <!--
-
-WIP
-
-| Function | Layer                               |                                                                                                                                                                                                                                                                                                                                                                                                         |
-| -------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Encoder  | 4-layer Convolutional Network       | - Conv(i=1, o=32, k=6, s=2, p=0) + LReLU + BN<br> - Conv(i=32, o=64, k=8, s=3, p=0) + LReLU + BN<br> - Conv(i=64, o=128, k=7, s=3, p=0) + LReLU + BN<br> - Conv(i=128, o=256, k=6, s=3, p=0) + LReLU + BN                                                                                                                                                                                               |
-|          | 1-layer Liner Network               | - Linear(i=2888, 0=256) + LReLU<br> - Linear(i=256, o=16) × 2 (in parallel)                                                                                                                                                                                                                                                                                                                             |
-| Decoder  | 1-layer Liner Network               | - Linear(i=256, 0=2888) + LReLU                                                                                                                                                                                                                                                                                                                                                                         |
-|          | 3-layer Upsampling + ResNet Network | - LReLU + TrConv(i=128, o=64, k=6, s=1, p=0)<br> - LReLU + Conv((i=64, o=64, k=, s=1, p=0) × 3<br> - LReLU + TrConv(i=64, o=32, k=8, s=1, p=0)<br> - LReLU + Conv((i=32, o=32, k=4, s=1, p=0) × 3<br> - LReLU + TrConv(i=32, o=16, k=7, s=1, p=0)<br> - LReLU + Conv((i=16, o=16, k=4, s=1, p=0) × 3<br> - LReLU + TrConv(i=16, o=16, k=7, s=1, p=0)<br> - LReLU + Conv((i=16, o=16, k=4, s=1, p=0) × 3 |
-|          | 1- layer Output Dense:              | - Conv1D(1=8, o=64, k=4, s=1, p=0) + Tanh                                                                                                                                                                                                                                                                                                                                                               |
-
 (下記の様な解説入れる）
 
 Table 2 Table showing configurations of the VAEs for the image-based datasets. In the Encoder Linear Stack, the last layer has two parallel linear layers for computing the mean and log standard deviation of the latent vectors respectively. Conv: 2-dimensional convolutional layer, TrConv:
