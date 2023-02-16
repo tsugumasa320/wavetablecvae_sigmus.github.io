@@ -72,7 +72,7 @@
 
 ## 提案手法
 
-<img width="1045" alt="スクリーンショット 2023-02-08 2 53 14" src="https://user-images.githubusercontent.com/35299183/217326549-51ad3ac1-50cd-4521-99c9-c6e4e7a05840.png">
+<img width="1478" alt="スクリーンショット 2023-02-17 4 16 47" src="https://user-images.githubusercontent.com/35299183/219465210-86572278-ca9b-4720-90d5-e5322916e81b.png">
 
 ### ①. データセット
 
