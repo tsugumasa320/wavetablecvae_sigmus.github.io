@@ -172,8 +172,4 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 
 [^5]: Caillon, Antoine, and Philippe Esling. "RAVE: A variational autoencoder for fast and high-quality neural audio synthesis." arXiv preprint arXiv:2111.05011 (2021).
 
-## Appendix
-
-### モデル詳細
-
 
