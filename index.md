@@ -89,6 +89,7 @@
   - 波形の時間依存性を捉えるために、 畳み込みとアップサンプリングを行うモデルを設計
   - 潜在変数の入力と出力部分で条件付けを実施
 
+<!--
 モデル構成詳細
 
 | Function | Layer |  |
@@ -101,7 +102,7 @@
 |  | 1- layer Output Dense: | - Conv1D(i=8, o=1, k=1, s=1) + Tanh |
   
 パディングは全て0,  i: input channels, o: output channels, k: kernel size, s: stride ReLU: Rectifier Linear Unit
-
+-->
 
 <!--
 (下記の様な解説入れる）
@@ -113,11 +114,6 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 -->
 
 ### ④. 損失関数
-
-<!--
-![スクリーンショット 2023-02-06 1 20 03](https://user-images.githubusercontent.com/35299183/216831207-e6c03af1-f912-4441-9b13-cbd3cba33e55.png)
-メモ：横長の図にする
--->
 
   - 音響信号は位相が異なっていても同じスペクトルを得る事がある
   - 特徴を正確に捉える為にSTFT(Short Term Fourier Transform)を行い、スペクトルからロスを計算
@@ -167,3 +163,9 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 [^4]: Engel, Jesse, et al. "DDSP: Differentiable digital signal processing." arXiv preprint arXiv:2001.04643 (2020).
 
 [^5]: Caillon, Antoine, and Philippe Esling. "RAVE: A variational autoencoder for fast and high-quality neural audio synthesis." arXiv preprint arXiv:2111.05011 (2021).
+
+## Appendix
+
+### モデル詳細
+
+
