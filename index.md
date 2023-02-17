@@ -89,6 +89,14 @@
   - 波形の時間依存性を捉えるために、 畳み込みとアップサンプリングを行うモデルを設計
   - 潜在変数の入力と出力部分で条件付けを実施
 
+<details>
+<summary>▶︎モデル構成詳細(クリックすると開きます)</summary>
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRM3M1KsQHm4GjGpavyBKXJLGuvPehU3XL7BO_lcD08egtKUAwBQ44VqG8W0MD0jSnd8NHL1bckYlV5/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
+</details>
+
+
 <!--
 モデル構成詳細
 
