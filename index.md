@@ -60,7 +60,7 @@
   - 繰り返し速度を変える事で任意の音高を出力する
 
 <details>
-<summary><span style="color: ｂlue; ">>参考動画(クリックすると開きます)</span></summary>
+<summary>▶︎参考動画(クリックすると開きます)</summary>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -89,8 +89,7 @@
   - 波形の時間依存性を捉えるために、 畳み込みとアップサンプリングを行うモデルを設計
   - 潜在変数の入力と出力部分で条件付けを実施
 
-<details>
-<summary><span style="color: ｂlue; ">>モデル構成詳細(クリックすると開きます)</span></summary>
+モデル構成詳細
 
 | Function | Layer |  |
 | - | - | - |
@@ -102,8 +101,6 @@
 |  | 1- layer Output Dense: | - Conv1D(i=8, o=1, k=1, s=1) + Tanh |
   
 パディングは全て0,  i: input channels, o: output channels, k: kernel size, s: stride ReLU: Rectifier Linear Unit
-  
-</details>
 
 
 <!--
