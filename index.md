@@ -159,8 +159,8 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 
 <details>
 <summary>▶︎DAW上での使用イメージ(クリックすると開きます)</summary>
-
-<img width="1680" alt="スクリーンショット 2023-02-18 16 58 34" src="https://user-images.githubusercontent.com/35299183/219849437-0dec097d-aed6-4e68-b66a-9b1a5e707d59.png">
+  
+<img width="1233" alt="スクリーンショット 2023-02-18 17 10 33" src="https://user-images.githubusercontent.com/35299183/219849566-75d9c68f-090b-49f8-a5a3-b8674d8aa9d8.png">
 
 </details>
 
