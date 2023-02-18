@@ -155,7 +155,7 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
   - 推論速度向上のためのモデル検討
   - UIの検討（下記は、検討中のUIイメージ)
 
-<img width="1502" alt="スクリーンショット 2023-02-06 1 55 14" src="https://user-images.githubusercontent.com/35299183/216832970-d43c6374-f9c5-40db-af94-c7c90889d79e.png">
+<img width="1402" alt="スクリーンショット 2023-02-18 16 30 15" src="https://user-images.githubusercontent.com/35299183/219847807-de380a93-6b4b-44c4-9929-a40844d6e181.png">
 
 ## 謝辞
  This work was supported by Cybozu Labs youth.
