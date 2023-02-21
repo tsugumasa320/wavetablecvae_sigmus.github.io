@@ -9,30 +9,32 @@
 - [序論](#序論)
 - [方法](#方法)
 - [提案手法](#提案手法)
-- [結果](#結果)
+- [実験](#実験)
 - [まとめ](#まとめ)
 
 ## 概要
 
 ![スクリーンショット 2023-02-15 17 27 14](https://user-images.githubusercontent.com/35299183/218973246-b803175d-42c8-4192-845d-eb04d16501b7.png)
 
-本研究では、ウェーブテーブル合成という音響合成方式において、深層生成モデルを用いて意味的な音色操作を行う手法を提案する。
-ウェーブテーブル合成とは、1周期分の波形(以下、ウェーブテーブルと称する）を繰り返し読み出す事で音響合成を行う方式である。
-
-提案手法では、Conditional Variational Autoencoder (CVAE) [^1]を用いて、ウェーブテーブルの条件付け生成を行う。
-条件付けには、音響特徴に基づいて算出した明るさ(bright), 温かさ(warm), リッチさ(rich)という3つのラベルを用いる。
-また、ウェーブテーブルの時間依存性を考慮するために、畳み込みとアップサンプリングを用いたCVAEのアーキテクチャを設計する。
-これらは、リアルタイム性を高めるために推論時に周波数領域に変換せずに実行可能とする。
-
-実験には、Adventure Kid Research & Tech-nology [^2]が提供するモノラルのウェーブテーブル4158件をデータセットとして用いる。
-実験の結果、提案手法はアトリビュートラベルを変化させることでウェーブテーブルの音色を操作できることを定性的に示す。
-本研究は、データに基づいた意味的な音色生成を実現することで、直感性及び簡易性を高める事を目標とする。
-
+<!--
 ### ユースケース案
 
   1. 使用したいウェーブテーブルを選び、モデルに入力
   2. つまみ(セマンティックラベル)を動かし、音色を調整する
   3. 出力されたウェーブテーブルを用いて演奏を行う
+-->
+
+本研究では、ウェーブテーブル合成という音響合成方式において、深層生成モデルを用いて意味的な音色操作を行う手法を提案する。
+ウェーブテーブル合成とは、1周期分の波形(以下、ウェーブテーブルと称する）を繰り返し読み出す事で音響合成を行う方式である。
+
+[提案手法](#提案手法)では、Conditional Variational Autoencoder (CVAE) [^1]を用いて、ウェーブテーブルの条件付け生成を行う。
+条件付けには、音響特徴に基づいて算出した明るさ(bright), 温かさ(warm), リッチさ(rich)という3つのラベルを用いる。
+また、ウェーブテーブルの特徴を捉えるために、畳み込みとアップサンプリングを用いたCVAEのアーキテクチャを設計する。
+これらは、リアルタイム性を高めるために推論時に周波数領域に変換せずに実行可能とする。
+
+[実験](#実験)には、Adventure Kid Research & Tech-nology [^2]が提供するモノラルのウェーブテーブル4158件をデータセットとして用いる。
+実験の結果、提案手法はアトリビュートラベルを変化させることでウェーブテーブルの音色を操作できることを定性的に示す。
+本研究は、データに基づいた意味的な音色生成を実現することで、直感性及び簡易性を高める事を目標とする。
 
 ## 序論
 
@@ -40,13 +42,13 @@
 
   - シンセサイザーは音楽制作やパフォーマンスにおいて重要な役割を果たしている
     - しかし、思い描いた音色を生成するには知識と経験が必要
-  - 音楽製作者や演奏家に人気のある"ウェーブテーブル合成"に注目
+  - 音楽製作者や演奏家に人気のある"ウェーブテーブル合成"に着目
 
 ### 目的
 
 - 深層生成モデルによる**データに基づいた意味的な音色操作**の実現
   - 音色の探索を直感的かつ簡易的にする
-  - （リアルタイム演奏に使用できる様に、軽量なモデルで推論時に周波数領域に変換せず実行できる様にしたい）
+  - リアルタイム演奏に使用できる様に、軽量なモデルを構築する
 
 
 ## 方法
@@ -76,14 +78,15 @@
 
 ### ①. データセット
 
-  - Adventure Kid Research & Technology[^2]が提供しているモノラルのSingle Cycle Waveform 4158件を使用
+  - Adventure Kid Research & Technology[^2]が提供しているモノラルのSingle Cycle Waveformを使用
+  - データ長は600[sample]
 
 ### ②. 教師ラベルの算出
   - Wavetableの分析は、静的音色について表される音響特徴量を用いる必要がある
   - Kreković[^3]は、bright, warm, richの３種類のアトリビュートラベルを音響特長量から計算しており、同様の手法を使用しデータセットからラベルを抽出する
   - 上記のラベルをCVAEの学習と条件付け生成に用いる
 
-静的音色:時間的な変化のない音(定常音)について、周波数スペクトルによって規定される音
+静的音色:時間的な変化のない音(定常音)について、周波数スペクトルによって規定される音[^6]
 
 ### ③. モデル構成
   - 波形の時間依存性を捉えるために、 畳み込みとアップサンプリングを行うモデルを設計
@@ -96,31 +99,6 @@
 
 </details>
 
-
-<!--
-モデル構成詳細
-
-| Function | Layer |  |
-| - | - | - |
-| Encoder | 6-layer Convolutional Network | - Conv(i=1, o=16, k=3, s=1) + LReLU + BN<br> - Conv(i=16, o=32, k=7, s=3) + LReLU + BN<br> - Conv(i=32, o=64, k=7, s=3) + LReLU + BN<br> - Conv(i=64, o=128, k=7, s=3) + LReLU + BN<br> - Conv(i=128, o=256, k=7, s=3) + LReLU + BN<br> - Conv(i=256, o=512, k=5, s=2) + LReLU + BN |
-|  | 2-layer Liner Network | - Linear(i=512, 0=64) + LReLU<br> - Linear(i=64+4(condition label), o=8) × 2 (in parallel) |
-| Decoder | 2-layer Liner Network | - Linear(i=8+4(condition label), 0=64) + LReLU<br>- Linear(i=64, 0=512) + LReLU |
-|  | 6-layer Upsampling +ResBlock | - LReLU + TrConv(i=512, o=256, k=5, s=2) + ResBlock<br>- LReLU + TrConv(i=256, o=128, k=8, s=3) + ResBlock<br>- LReLU + TrConv(i=128, o=64, k=8, s=3) + ResBlock<br>- LReLU + TrConv(i=64, o=32, k=6, s=3) + ResBlock<br>- LReLU + TrConv(i=32, o=16, k=7, s=3) + ResBlock<br>- LReLU + TrConv(i=16, o=8, k=3, s=1) + ResBlock |
-|  | (Residual Block) |  - LReLU + Conv((k=1, s=1) × 3 |
-|  | 1- layer Output Dense: | - Conv1D(i=8, o=1, k=1, s=1) + Tanh |
-  
-パディングは全て0,  i: input channels, o: output channels, k: kernel size, s: stride ReLU: Rectifier Linear Unit
--->
-
-<!--
-(下記の様な解説入れる）
-
-Table 2 Table showing configurations of the VAEs for the image-based datasets. In the Encoder Linear Stack, the last layer has two parallel linear layers for computing the mean and log standard deviation of the latent vectors respectively. Conv: 2-dimensional convolutional layer, TrConv:
-2-dimensional transposed convolutional layer, i: input channels, o: output channels, k: kernel size, s: stride, p: padding, d: dropout probability,
-SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
-
--->
-
 ### ④. 損失関数
 
   - 音響信号は位相が異なっていても同じスペクトルを得る事がある
@@ -132,7 +110,7 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
    - $\|\|・\|\|_F$ , $\|\|・\|\|_1$ はそれぞれフロべニウスノルム、L1ノルムである
    - 上記スペクトル距離は、Engelら[^4]やCaillonら[^5]が使用しているマルチスペクトル距離を参考にした
 
-## 結果
+## 実験
 
 ### 再構成品質
   - テストデータにおいて、再構成品質と条件付け生成の結果を確認
@@ -179,4 +157,4 @@ SELU: Scaled Exponential Linear Unit (291. ReLU: Rectifier Linear Unit
 
 [^5]: Caillon, Antoine, and Philippe Esling. "RAVE: A variational autoencoder for fast and high-quality neural audio synthesis." arXiv preprint arXiv:2111.05011 (2021).
 
-
+[^6]: 岩宮眞一郎：音響サイエンスシリーズ1 音色の感性学， コロナ社，pp.64-67， 2010.
