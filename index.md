@@ -105,15 +105,10 @@
 ## 実験
 
 ### 再構成品質
-  - テストデータにおいて、再構成品質と条件付け生成の結果を確認
-  - 16個くらいの再構成結果の表(テストデータからランダムに)
+  - 再構成品質と条件付け生成の結果を確認
 
-|| Reconstruction || Condition |
-| --- | --- | --- | --- |
-|name| wavetable (blue=original, orange=reconstruct) | spectrum(original) | spectrum(reconstruct) |
-|AKWF_sin.wav|<img src="osillo/AKWF_sin.wav.jpeg" width="350">| <img src="org_spec/AKWF_sin.wav.jpeg" width="350"> | <img src="recon_spec/recon_AKWF_sin.wav.jpeg" width="350"> | <img src="featureExatract/AKWF_sin.wav.jpg">
-||     |     |     |
-||     |     |     |
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQwxpP2ApMAMufppn2ufYc12XJvryYNVus_J1emjjjvLfkYiltweHePaUqu0M44rmHgO4XBsx0-nhWz/pubhtml?widget=true&amp;headers=false"　width="1000" height="500"></iframe>
+
 
 ## まとめ
 
