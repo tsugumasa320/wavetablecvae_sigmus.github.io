@@ -2,7 +2,7 @@
 
 <!--このWebサイトは、第136回音楽情報科学研究発表会 デモ・萌芽・議論セッションで発表の
 “Wavetable合成の為のアトリビュート操作型CVAEエフェクターの検討”についての発表資料です-->
-## CVAEを用いたウェーブテーブル合成の意味的な音色操作についての検討: SEMANTIC CONTROL OF WAVETABLE SYNTHESIS USING CVAE
+## CVAEを用いたウェーブテーブル合成の意味的な音色制御についての検討: SEMANTIC CONTROL OF WAVETABLE SYNTHESIS USING CVAE
 
 ## 目次
 
@@ -16,7 +16,7 @@
 
 <img width="1234" alt="スクリーンショット 2023-02-21 9 33 26" src="https://user-images.githubusercontent.com/35299183/220217914-7f09d79a-21c4-4a0d-b1c5-0ca636a18aea.png">
 
-本研究では、ウェーブテーブル合成という音響合成方式において、深層生成モデルを用いて意味的な音色操作を行う手法を提案する。
+本研究では、ウェーブテーブル合成[^7]という音響合成方式において、深層生成モデルを用いて意味的な音色制御を行う手法を提案する。
 ウェーブテーブル合成とは、1周期分の波形(以下、ウェーブテーブルと称する）を繰り返し読み出す事で音響合成を行う方式である。
 
 [提案手法](#提案手法)では、Conditional Variational Autoencoder (CVAE) [^1]を用いて、ウェーブテーブルの条件付け生成を行う。
@@ -34,13 +34,16 @@
 
   - シンセサイザーは音楽制作やパフォーマンスにおいて重要な役割を果たしている
     - しかし、思い描いた音色を生成するには知識と経験が必要
-  - 音楽製作者や演奏家に人気のある"ウェーブテーブル合成"に着目
+  - デジタル音響合成の最小単位である、"ウェーブテーブル合成"に着目
+    - ウェーブテーブルは多くの場合、用意されたものを選ぶかスペクトラムから作成する[^7]
+    - しかし、専門的な知識や経験が必要で習熟に時間を要す
 
 ### 目的
 
-- 深層生成モデルによる**データに基づいた意味的な音色操作**の実現
-  - 音色の探索を直感的かつ簡易的にする
-  - リアルタイム演奏に使用できる様に、軽量なモデルを構築する
+- 深層生成モデルによる**データに基づいた意味的なウェーブテーブル制御**の実現
+  - ①意味的な制御に基づく、音色探索の直感性向上
+  - ②新たなモジュレーション・エフェクトの創出
+  - ③リアルタイム演奏にも使用可能な、軽量なモデルの構築
 
 
 ## 方法
@@ -154,3 +157,5 @@
 [^5]: Caillon, Antoine, and Philippe Esling. "RAVE: A variational autoencoder for fast and high-quality neural audio synthesis." arXiv preprint arXiv:2111.05011 (2021).
 
 [^6]: 岩宮眞一郎：音響サイエンスシリーズ1 音色の感性学， コロナ社，pp.64-67， 2010.
+
+[^7]: Robert Bristow-Johnson, “Wavetable synthesis 101, a fundamental perspective,” in Audio Engineering Society Convention 101. Audio Engineering Society, 1996.
