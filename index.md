@@ -40,11 +40,8 @@
 
 ### 目的
 
-- 深層生成モデルによる**データに基づいた意味的なウェーブテーブル制御**の実現
-  - ①意味的な制御に基づく、音色探索の直感性向上
-  - ②新たなモジュレーション・エフェクトの創出
-  - ③リアルタイム演奏にも使用可能な、軽量なモデルの構築
-
+- **意味的なウェーブテーブル制御技術の実現による音色探索の直感性向上**
+  - ＋αで新たなモジュレーション・エフェクトの創出とリアルタイムに使用可能な軽量モデルの構築
 
 ## 方法
 
@@ -57,7 +54,7 @@
   - 繰り返し速度を変える事で任意の音高を出力する
 
 <details>
-<summary>▶︎参考動画(クリックすると開きます)</summary>
+<summary>▶︎参考動画(クリックで開きます)</summary>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -88,7 +85,7 @@
   - 潜在変数の入力と出力部分で条件付けを実施
 
 <details>
-<summary>▶︎モデル構成詳細(クリックすると開きます)</summary>
+<summary>▶︎モデル構成詳細(クリックで開きます)</summary>
 
 <iframe width="700" height="460" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRM3M1KsQHm4GjGpavyBKXJLGuvPehU3XL7BO_lcD08egtKUAwBQ44VqG8W0MD0jSnd8NHL1bckYlV5/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
