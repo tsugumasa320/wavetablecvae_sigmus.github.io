@@ -108,13 +108,12 @@
   - テストデータにおいて、再構成品質と条件付け生成の結果を確認
   - 16個くらいの再構成結果の表(テストデータからランダムに)
 
-| Reconstruction || Condition |
-| --- | --- | --- |
-|![AKWF_sin wav](https://user-images.githubusercontent.com/35299183/220599498-856eaebc-81ef-4b32-b91b-ae3e4608ac0e.jpeg)| ![AKWF_sin wav](https://user-images.githubusercontent.com/35299183/220599847-8c269896-e774-4026-b2a8-5eed85958afa.jpeg) | ![recon_AKWF_sin wav](https://user-images.githubusercontent.com/35299183/220599932-a393fc33-7514-484e-8569-10c5bed41798.jpeg) |
-|     |     |     |
-|     |     |     |
-
-<img width="653" alt="スクリーンショット 2023-02-06 1 44 42" src="https://user-images.githubusercontent.com/35299183/216832429-6054285c-20f1-4cb3-a086-027fc3e6b114.png">
+|| Reconstruction || Condition |
+| --- | --- | --- | --- |
+|name| wavetable (blue=original, orange=reconstruct) | spectrum(original) | spectrum(reconstruct) |
+|AKWF_sin.wav|<img src="osillo/AKWF_sin.wav.jpeg" width="350">| <img src="org_spec/AKWF_sin.wav.jpeg" width="350"> | <img src="recon_spec/recon_AKWF_sin.wav.jpeg" width="350"> | <img src="featureExatract/AKWF_sin.wav.jpg">
+||     |     |     |
+||     |     |     |
 
 ## まとめ
 
@@ -133,7 +132,7 @@
 
 <details>
 <summary>▶︎おまけ：DAW上での使用イメージ(クリックで開きます)</summary>
-  
+
 <img width="1233" alt="スクリーンショット 2023-02-18 17 10 33" src="https://user-images.githubusercontent.com/35299183/219849566-75d9c68f-090b-49f8-a5a3-b8674d8aa9d8.png">
 
 </details>
