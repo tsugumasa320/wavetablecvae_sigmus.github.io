@@ -237,7 +237,7 @@
 ## 謝辞
  This work was supported by Cybozu Labs youth.
 
-## 関連文献
+## 参考文献
 
 [^1]: Kingma, Durk P., et al. “Semi-supervised learning with deep generative models.” Advances in neural information processing systems 27 (2014).
 
