@@ -109,6 +109,18 @@
 
 <iframe width="900" height="580" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQwxpP2ApMAMufppn2ufYc12XJvryYNVus_J1emjjjvLfkYiltweHePaUqu0M44rmHgO4XBsx0-nhWz/pubhtml?widget=true&amp;headers=false"></iframe>
 
+| Condition value | 0   | 0.25 | 0.5 | 0.75 | 1.0 | 
+| --------------- | --- | ---- | --- | ---- | --- | 
+| 明るさ(bright)  |     |      |     |      |     | 
+|                 |     |      |     |      |     | 
+|                 |     |      |     |      |     | 
+| リッチさ(rich)  |     |      |     |      |     | 
+|                 |     |      |     |      |     | 
+|                 |     |      |     |      |     | 
+| 温かさ(warm)    |     |      |     |      |     | 
+|                 |     |      |     |      |     | 
+|                 |     |      |     |      |     | 
+
 
 ## まとめ
 
