@@ -115,9 +115,10 @@
 
 - 元になるWavetableをモデルに入力(入力Wavetableの詳細は[上記参照](## 実験))
 - 明るさ、リッチさ、暖かさをそれぞれ3段階の値(0,0.5,1.0)で条件付け生成し楽曲にて確認
+- (折りたたみのタブになっているのでクリックすると展開されます。)
 
 <details>
-<summary>### ▶︎sine_wave(クリックで開きます)</summary>
+<summary>▶︎sine_wave</summary>
 
 <table>
   <tr>
@@ -149,7 +150,7 @@
 </details>
 
 <details>
-<summary>### ▶︎square_wave</summary>
+<summary>▶︎square_wave</summary>
 
 <table>
   <tr>
@@ -180,7 +181,7 @@
 </details>
 
 <details>
-<summary>### ▶︎distorted_wave1</summary>
+<summary>▶︎distorted_wave1</summary>
 
 <table>
   <tr>
