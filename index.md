@@ -109,17 +109,40 @@
 
 <iframe width="900" height="580" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQwxpP2ApMAMufppn2ufYc12XJvryYNVus_J1emjjjvLfkYiltweHePaUqu0M44rmHgO4XBsx0-nhWz/pubhtml?widget=true&amp;headers=false"></iframe>
 
-| Condition value | 0   | 0.25 | 0.5 | 0.75 | 1.0 | 
-| --------------- | --- | ---- | --- | ---- | --- | 
-| 明るさ(bright)  |     |      |     |      |     | 
-|                 |     |      |     |      |     | 
-|                 |     |      |     |      |     | 
-| リッチさ(rich)  |     |      |     |      |     | 
-|                 |     |      |     |      |     | 
-|                 |     |      |     |      |     | 
-| 温かさ(warm)    |     |      |     |      |     | 
-|                 |     |      |     |      |     | 
-|                 |     |      |     |      |     | 
+---
+
+### sine_wave
+| Condition value | 0   | 0.5 | 1.0 |
+| --------------- | --- | ---- | --- |
+| 明るさ(bright) | <img width="100" src="oscillo/b_0/AKWF_sin.wav.jpeg"> | <img width="100" src="oscillo/b_0.5/AKWF_sin.wav.jpeg"> | <img width="100" src="oscillo/b_1.0/AKWF_sin.wav.jpeg"> |
+|| <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_b0.wav" style="width:100px;height:30px;"></audio> | <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_b0.5.wav" style="width:100px;height:30px;"></audio> | <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_b1.0.wav" style="width:100px;height:30px;"></audio> |
+| リッチさ(rich) | <img width="100" src="oscillo/r_0/AKWF_sin.wav.jpeg"> | <img width="100" src="oscillo/r_0.5/AKWF_sin.wav.jpeg"> | <img width="100" src="oscillo/r_1.0/AKWF_sin.wav.jpeg"> |
+|| <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_r0.wav" style="width:100px;height:30px;"></audio> | <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_r0.5.wav" style="width:100px;height:30px;"></audio> | <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_r1.0.wav" style="width:100px;height:30px;"></audio> |
+| 温かさ(warm) | <img width="100" src="oscillo/w_0/AKWF_sin.wav.jpeg"> | <img width="100" src="oscillo/w_0.5/AKWF_sin.wav.jpeg"> | <img width="100" src="oscillo/w_1.0/AKWF_sin.wav.jpeg"> |
+|| <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w0.wav" style="width:100px;height:30px;"></audio> | <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w0.5.wav" style="width:100px;height:30px;"></audio> | <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w1.0.wav" style="width:100px;height:30px;"></audio> |
+
+---
+
+### square_wave
+| Condition value | 0   | 0.5 | 1.0 |
+| --------------- | --- | ---- | --- |
+| 明るさ(bright)  | <img width="100" src="oscillo/b_0/AKWF_squ.wav.jpeg"> | <img width="100" src="oscillo/b_0.5/AKWF_squ.wav.jpeg"> | <img width="100" src="oscillo/b_1.0/AKWF_squ.wav.jpeg"> |
+|                 |     |      |     |
+| リッチさ(rich)  | <img width="100" src="oscillo/r_0/AKWF_squ.wav.jpeg"> | <img width="100" src="oscillo/r_0.5/AKWF_squ.wav.jpeg"> | <img width="100" src="oscillo/r_1.0/AKWF_squ.wav.jpeg"> |
+|                 |     |      |     |
+| 温かさ(warm)    | <img width="100" src="oscillo/w_0/AKWF_squ.wav.jpeg"> | <img width="100" src="oscillo/w_0.5/AKWF_squ.wav.jpeg"> | <img width="100" src="oscillo/w_1.0/AKWF_squ.wav.jpeg"> |
+|                 |     |      |     |
+
+---
+### distorted_wave
+| Condition value | 0   | 0.5 | 1.0 |
+| --------------- | --- | ---- | --- |
+| 明るさ(bright)  | <img width="100" src="oscillo/b_0/AKWF_distorted_0013.wav.jpeg"> | <img width="100" src="oscillo/b_0.5/AKWF_distorted_0013.wav.jpeg"> | <img width="100" src="oscillo/b_1.0/AKWF_distorted_0013.wav.jpeg"> |
+|                 |     |      |     |
+| リッチさ(rich)  | <img width="100" src="oscillo/r_0/AKWF_distorted_0013.wav.jpeg"> | <img width="100" src="oscillo/r_0.5/AKWF_distorted_0013.wav.jpeg"> | <img width="100" src="oscillo/r_1.0/AKWF_distorted_0013.wav.jpeg"> |
+|                 |     |      |     |
+| 温かさ(warm)    | <img width="100" src="oscillo/w_0/AKWF_distorted_0013.wav.jpeg"> | <img width="100" src="oscillo/w_0.5/AKWF_distorted_0013.wav.jpeg"> | <img width="100" src="oscillo/w_1.0/AKWF_distorted_0013.wav.jpeg"> |
+|                 |     |      |     |
 
 
 ## まとめ
