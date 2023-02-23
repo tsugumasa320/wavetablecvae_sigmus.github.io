@@ -112,14 +112,6 @@
 ---
 
 ### sine_wave
-| Condition value | 0   | 0.5 | 1.0 |
-| --------------- | --- | ---- | --- |
-| 明るさ(bright) | <img width="100" src="oscillo/b_0/AKWF_sin.wav.jpeg"> | <img width="100" src="oscillo/b_0.5/AKWF_sin.wav.jpeg"> | <img width="100" src="oscillo/b_1.0/AKWF_sin.wav.jpeg"> |
-|| <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_b0.wav" style="width:100px;height:30px;"></audio> | <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_b0.5.wav" style="width:100px;height:30px;"></audio> | <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_b1.0.wav" style="width:100px;height:30px;"></audio> |
-| リッチさ(rich) | <img width="100" src="oscillo/r_0/AKWF_sin.wav.jpeg"> | <img width="100" src="oscillo/r_0.5/AKWF_sin.wav.jpeg"> | <img width="100" src="oscillo/r_1.0/AKWF_sin.wav.jpeg"> |
-|| <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_r0.wav" style="width:100px;height:30px;"></audio> | <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_r0.5.wav" style="width:100px;height:30px;"></audio> | <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_r1.0.wav" style="width:100px;height:30px;"></audio> |
-| 温かさ(warm) | <img width="100" src="oscillo/w_0/AKWF_sin.wav.jpeg"> | <img width="100" src="oscillo/w_0.5/AKWF_sin.wav.jpeg"> | <img width="100" src="oscillo/w_1.0/AKWF_sin.wav.jpeg"> |
-|| <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w0.wav" style="width:100px;height:30px;"></audio> | <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w0.5.wav" style="width:100px;height:30px;"></audio> | <audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w1.0.wav" style="width:100px;height:30px;"></audio> |
 
 <table>
   <tr>
@@ -129,36 +121,24 @@
     <th>1.0</th>
   </tr>
   <tr>
-    <td>明るさ(brightness)</td>
+    <td>明るさ(bright)</td>
     <td><img width="100" src="oscillo/b_0/AKWF_sin.wav.jpeg"><br><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_b0.wav" style="width:100px;height:30px;"></audio></td>
     <td><img width="100" src="oscillo/b_0.5/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_b0.5.wav" style="width:100px;height:30px;"></audio></td>
     <td><img width="100" src="oscillo/b_1.0/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_b1.0.wav" style="width:100px;height:30px;"></audio></td>
   </tr>
+  <tr>
+    <td>リッチさ(rich)</td>
+    <td><img width="100" src="oscillo/r_0/AKWF_sin.wav.jpeg"><br><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_r0.wav" style="width:100px;height:30px;"></audio></td>
+    <td><img width="100" src="oscillo/r_0.5/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_r0.5.wav" style="width:100px;height:30px;"></audio></td>
+    <td><img width="100" src="oscillo/r_1.0/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_r1.0.wav" style="width:100px;height:30px;"></audio></td>
+  </tr>
+  <tr>
+    <td>温かさ(warm)</td>
+    <td><img width="100" src="oscillo/w_0/AKWF_sin.wav.jpeg"><br><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w0.wav" style="width:100px;height:30px;"></audio></td>
+    <td><img width="100" src="oscillo/w_0.5/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w0.5.wav" style="width:100px;height:30px;"></audio></td>
+    <td><img width="100" src="oscillo/w_1.0/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w1.0.wav" style="width:100px;height:30px;"></audio></td>
+  </tr>
 </table>
-
-
----
-
-### square_wave
-| Condition value | 0   | 0.5 | 1.0 |
-| --------------- | --- | ---- | --- |
-| 明るさ(bright)  | <img width="100" src="oscillo/b_0/AKWF_squ.wav.jpeg"> | <img width="100" src="oscillo/b_0.5/AKWF_squ.wav.jpeg"> | <img width="100" src="oscillo/b_1.0/AKWF_squ.wav.jpeg"> |
-|                 |     |      |     |
-| リッチさ(rich)  | <img width="100" src="oscillo/r_0/AKWF_squ.wav.jpeg"> | <img width="100" src="oscillo/r_0.5/AKWF_squ.wav.jpeg"> | <img width="100" src="oscillo/r_1.0/AKWF_squ.wav.jpeg"> |
-|                 |     |      |     |
-| 温かさ(warm)    | <img width="100" src="oscillo/w_0/AKWF_squ.wav.jpeg"> | <img width="100" src="oscillo/w_0.5/AKWF_squ.wav.jpeg"> | <img width="100" src="oscillo/w_1.0/AKWF_squ.wav.jpeg"> |
-|                 |     |      |     |
-
----
-### distorted_wave
-| Condition value | 0   | 0.5 | 1.0 |
-| --------------- | --- | ---- | --- |
-| 明るさ(bright)  | <img width="100" src="oscillo/b_0/AKWF_distorted_0013.wav.jpeg"> | <img width="100" src="oscillo/b_0.5/AKWF_distorted_0013.wav.jpeg"> | <img width="100" src="oscillo/b_1.0/AKWF_distorted_0013.wav.jpeg"> |
-|                 |     |      |     |
-| リッチさ(rich)  | <img width="100" src="oscillo/r_0/AKWF_distorted_0013.wav.jpeg"> | <img width="100" src="oscillo/r_0.5/AKWF_distorted_0013.wav.jpeg"> | <img width="100" src="oscillo/r_1.0/AKWF_distorted_0013.wav.jpeg"> |
-|                 |     |      |     |
-| 温かさ(warm)    | <img width="100" src="oscillo/w_0/AKWF_distorted_0013.wav.jpeg"> | <img width="100" src="oscillo/w_0.5/AKWF_distorted_0013.wav.jpeg"> | <img width="100" src="oscillo/w_1.0/AKWF_distorted_0013.wav.jpeg"> |
-|                 |     |      |     |
 
 
 ## まとめ
