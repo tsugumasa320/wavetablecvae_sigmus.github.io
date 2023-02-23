@@ -111,7 +111,8 @@
 
 ---
 
-### sine_wave
+<details>
+<summary>### ▶︎sine_waveの条件付けによる音色の変化</summary>
 
 <table>
   <tr>
@@ -139,6 +140,8 @@
     <td><img width="200" src="oscillo/w_1.0/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w1.0.wav" style="width:200px;height:30px;"></audio></td>
   </tr>
 </table>
+  
+</details>
 
 ### square wave
 
