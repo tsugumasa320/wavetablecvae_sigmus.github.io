@@ -111,8 +111,13 @@
 
 ---
 
+### 意味的なラベルによる音色の変化
+
+- 元になるWavetableをモデルに入力(入力Wavetableの詳細は[上記参照](## 実験))
+- 明るさ、リッチさ、暖かさをそれぞれ3段階の値(0,0.5,1.0)で条件付け生成し楽曲にて確認
+
 <details>
-<summary>### ▶︎sine_waveの条件付けによる音色の変化</summary>
+<summary>### ▶︎sine_wave(クリックで開きます)</summary>
 
 <table>
   <tr>
@@ -143,7 +148,8 @@
   
 </details>
 
-### square wave
+<details>
+<summary>### ▶︎square_wave</summary>
 
 <table>
   <tr>
@@ -171,8 +177,10 @@
     <td><img width="200" src="oscillo/w_1.0/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w1.0.wav" style="width:200px;height:30px;"></audio></td>
   </tr>
 </table>
+</details>
 
-### distorted wave
+<details>
+<summary>### ▶︎distorted_wave1</summary>
 
 <table>
   <tr>
@@ -200,6 +208,8 @@
     <td><img width="200" src="oscillo/w_1.0/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w1.0.wav" style="width:200px;height:30px;"></audio></td>
   </tr>
 </table>
+  
+</details>
 
 ## まとめ
 
