@@ -55,6 +55,10 @@
   - Encoder-Decoderネットワークに基づいた、確率的生成モデルの一種
   - 入力データに対して条件付きで生成を行うことが可能
 
+## 関連研究
+
+- (WIP)
+
 ## 提案手法
 
 <img width="1478" alt="スクリーンショット 2023-02-17 4 16 47" src="https://user-images.githubusercontent.com/35299183/219465210-86572278-ca9b-4720-90d5-e5322916e81b.png">
@@ -248,9 +252,9 @@
 
 [^2]: "Adventure Kid Research & Technology (AKRT)" https://www.adventurekid.se/akrt/
 
-[^3]: Kreković, Gordan. "DEEP CONVOLUTIONAL OSCILLATOR: SYNTHESIZING WAVEFORMS FROM TIMBRAL DESCRIPTORS." (2022).
+[^3]: Kreković, Gordan. "DEEP CONVOLUTIONAL OSCILLATOR: SYNTHESIZING WAVEFORMS FROM TIMBRAL DESCRIPTORS." Sound and Music Computing (2022).
 
-[^4]: Engel, Jesse, et al. "DDSP: Differentiable digital signal processing." arXiv preprint arXiv:2001.04643 (2020).
+[^4]: Engel, Jesse, et al. DDSP: Differentiable digital signal processing. In International Conference on Learning Representations, The International Conference on Learning Representations (2020)
 
 [^5]: Caillon, Antoine, and Philippe Esling. "RAVE: A variational autoencoder for fast and high-quality neural audio synthesis." arXiv preprint arXiv:2111.05011 (2021).
 
