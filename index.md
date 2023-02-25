@@ -151,9 +151,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <th>Estimate value</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>b=0.109, r=0.112, w=0.00</th>
+    <th>b=0.277, r=0.305, w=0.193</th>
+    <th>b=0.374, r=0.444, w=0.813</th>
   </tr>
   <tr>
     <td>リッチさ(rich)</td>
@@ -163,9 +163,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <th>Estimate value</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>b=0.109, r=0.115, w=0.00</th>
+    <th>b=0.124, r=0.421, w=0.01</th>
+    <th>b=0.198, r=0.559, w=0.08</th>
   </tr>
   <tr>
     <td>暖かさ(warm)</td>
@@ -175,9 +175,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <th>Estimate value</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>b=0.109, r=0.117, w=0.00</th>
+    <th>b=0.143, r=0.204, w=0.450</th>
+    <th>b=0.173, r=0.180, w=0.889</th>
   </tr>
 </table>
   
@@ -201,9 +201,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <th>Estimate value</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>b=0.140, r=0.433, w=0.233</th>
+    <th>b=0.280, r=0.426, w=0.178</th>
+    <th>b=0.352, r=0.465, w=0.632</th>
   </tr>
   <tr>
     <td>リッチさ(rich)</td>
@@ -213,9 +213,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <th>Estimate value</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>b=0.109, r=0.140, w=0.00</th>
+    <th>b=0.176, r=0.419, w=0.06</th>
+    <th>b=0.195, r=0.549, w=0.12</th>
   </tr>
   <tr>
     <td>暖かさ(warm)</td>
@@ -225,9 +225,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <th>Estimate value</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>b=0.151, r=0.441, w=0.032</th>
+    <th>b=0.226, r=0.466, w=0.517</th>
+    <th>b=0.297, r=0.483, w=0.886</th>
   </tr>
 </table>
 </details>
@@ -250,9 +250,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <th>Estimate value</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>b=0.123, r=0.413, w=0.306</th>
+    <th>b=0.323, r=0.451, w=0.620</th>
+    <th>b=0.390, r=0.481, w=0.905</th>
   </tr>
   <tr>
     <td>リッチさ(rich)</td>
@@ -262,9 +262,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <th>Estimate value</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>b=0.200, r=0.260, w=0.600</th>
+    <th>b=0.250, r=0.450, w=0.533</th>
+    <th>b=0.214, r=0.544, w=0.235</th>
   </tr>
   <tr>
     <td>暖かさ(warm)</td>
@@ -274,9 +274,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <th>Estimate value</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>b=0.162, r=0.385, w=0.045</th>
+    <th>b=0.223, r=0.404, w=0.461</th>
+    <th>b=0.250, r=0.551, w=0.817</th>
   </tr>
 </table>
   
