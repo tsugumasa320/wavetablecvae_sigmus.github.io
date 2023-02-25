@@ -24,12 +24,12 @@
 ウェーブテーブル合成とは、1周期分の波形(以下、ウェーブテーブルと称する）を繰り返し読み出す事で音響合成を行う方式である。
 
 [提案手法](#提案手法)では、Conditional Variational Autoencoder (CVAE) [^1]を用いて、ウェーブテーブルの条件付け生成を行う。
-条件付けには、音響特徴に基づいて算出した明るさ(bright), 温かさ(warm), リッチさ(rich)という3つのラベルを用いる。
+条件付けには、音響特徴に基づいて算出した明るさ(bright), 温かさ(warm), リッチさ(rich)という3つの意味的なラベルを用いる。
 また、ウェーブテーブルの特徴を捉えるために、畳み込みとアップサンプリングを用いたCVAEのアーキテクチャを設計する。
 これらは、リアルタイム性を高めるために推論時に周波数領域に変換せずに実行可能とする。
 
 [実験](#実験)には、Adventure Kid Research & Technology [^2]が提供するモノラルのウェーブテーブル4158件をデータセットとして用いる。
-実験の結果、提案手法はアトリビュートラベルを変化させることでウェーブテーブルの音色を操作できることを定性的・定量的に示す。
+実験の結果、提案手法は意味的なラベルを変化させることでウェーブテーブルの音色を操作できることを定性的・定量的に示す。
 本研究は、データに基づいた**意味的なウェーブテーブル制御の実現による音色探索の直感性向上**を目的する。
 
 ## 序論
@@ -53,6 +53,7 @@
 <details>
 <summary>▶︎参考動画(クリックで開きます)</summary>
 
+Wavetable Osillator basics
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 </details>
@@ -115,7 +116,6 @@
 - バッチサイズは32
 - エポック数は30000回
 
-
 ## 結果
 
 ### 再構成品質
@@ -168,7 +168,7 @@
     <th></th>
   </tr>
   <tr>
-    <td>温かさ(warm)</td>
+    <td>暖かさ(warm)</td>
     <td><img width="200" src="oscillo/w_0/AKWF_sin.wav.jpeg"><br><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w0.wav" style="width:200px;height:30px;"></audio></td>
     <td><img width="200" src="oscillo/w_0.5/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w0.5.wav" style="width:200px;height:30px;"></audio></td>
     <td><img width="200" src="oscillo/w_1.0/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w1.0.wav" style="width:200px;height:30px;"></audio></td>
@@ -218,7 +218,7 @@
     <th></th>
   </tr>
   <tr>
-    <td>温かさ(warm)</td>
+    <td>暖かさ(warm)</td>
     <td><img width="200" src="oscillo/w_0/AKWF_squ.wav.jpeg"><br><audio controls src="examples/squ_wave/sigmus_wavetablecvae w0.wav" style="width:200px;height:30px;"></audio></td>
     <td><img width="200" src="oscillo/w_0.5/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae w0.5.wav" style="width:200px;height:30px;"></audio></td>
     <td><img width="200" src="oscillo/w_1.0/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae w1.0.wav" style="width:200px;height:30px;"></audio></td>
@@ -267,7 +267,7 @@
     <th></th>
   </tr>
   <tr>
-    <td>温かさ(warm)</td>
+    <td>暖かさ(warm)</td>
     <td><img width="200" src="oscillo/w_0/AKWF_distorted_0013.wav.jpeg"><br><audio controls src="examples/distorted_wave/sigmus_wavetablecvae w0.wav" style="width:200px;height:30px;"></audio></td>
     <td><img width="200" src="oscillo/w_0.5/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae w0.5.wav" style="width:200px;height:30px;"></audio></td>
     <td><img width="200" src="oscillo/w_1.0/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae w1.0.wav" style="width:200px;height:30px;"></audio></td>
