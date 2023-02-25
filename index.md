@@ -295,6 +295,10 @@ Wavetable Osillator basics
 - b=bright, r=rich, w=warm
 - Prelude of Suite No. 1 in G major, BWV 1007, J.S. Bachを使用
 
+### 実行時間
+
+0.0026[s]
+
 ## まとめ
 
 ### 考察・今後の展望
