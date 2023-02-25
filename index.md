@@ -245,9 +245,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <td>明るさ(bright)</td>
-    <td><img width="250" src="oscillo/b_0/AKWF_distorted_0013.wav.jpeg"><br><audio controls src="examples/distorted_wave/sigmus_wavetablecvae b0.wav" style="width:200px;height:30px;"></audio></td>
-    <td><img width="250" src="oscillo/b_0.5/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae b0.5.wav" style="width:200px;height:30px;"></audio></td>
-    <td><img width="250" src="oscillo/b_1.0/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae b1.0.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/b_0/AKWF_distorted_0013.wav.jpeg"><br><audio controls src="examples/distorted_wave/sigmus_wavetablecvae b0.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/b_0.5/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae b0.5.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/b_1.0/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae b1.0.wav" style="width:200px;height:30px;"></audio></td>
   </tr>
   <tr>
     <th>Estimate value</th>
@@ -257,9 +257,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <td>リッチさ(rich)</td>
-    <td><img width="250" src="oscillo/r_0/AKWF_distorted_0013.wav.jpeg"><br><audio controls src="examples/distorted_wave/sigmus_wavetablecvae r0.wav" style="width:200px;height:30px;"></audio></td>
-    <td><img width="250" src="oscillo/r_0.5/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae r0.5.wav" style="width:200px;height:30px;"></audio></td>
-    <td><img width="250" src="oscillo/r_1.0/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae r1.0.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/r_0/AKWF_distorted_0013.wav.jpeg"><br><audio controls src="examples/distorted_wave/sigmus_wavetablecvae r0.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/r_0.5/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae r0.5.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/r_1.0/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae r1.0.wav" style="width:200px;height:30px;"></audio></td>
   </tr>
   <tr>
     <th>Estimate value</th>
@@ -269,9 +269,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <td>暖かさ(warm)</td>
-    <td><img width="250" src="oscillo/w_0/AKWF_distorted_0013.wav.jpeg"><br><audio controls src="examples/distorted_wave/sigmus_wavetablecvae w0.wav" style="width:200px;height:30px;"></audio></td>
-    <td><img width="250" src="oscillo/w_0.5/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae w0.5.wav" style="width:200px;height:30px;"></audio></td>
-    <td><img width="250" src="oscillo/w_1.0/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae w1.0.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/w_0/AKWF_distorted_0013.wav.jpeg"><br><audio controls src="examples/distorted_wave/sigmus_wavetablecvae w0.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/w_0.5/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae w0.5.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/w_1.0/AKWF_distorted_0013.wav.jpeg"><audio controls src="examples/distorted_wave/sigmus_wavetablecvae w1.0.wav" style="width:200px;height:30px;"></audio></td>
   </tr>
   <tr>
     <th>Estimate value</th>
