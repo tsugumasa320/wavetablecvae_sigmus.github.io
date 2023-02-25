@@ -51,7 +51,7 @@
   - 繰り返し速度を変える事で任意の音高を出力する
 
 <details>
-<summary>▶︎参考動画(クリックで開きます)</summary>
+<summary>▶︎参考動画(クリックで開く)</summary>
 
 Wavetable Osillator basics
 
@@ -84,10 +84,10 @@ Wavetable Osillator basics
 静的音色:時間的な変化のない音(定常音)について、周波数スペクトルによって規定される音[^6]
 
 <details>
-<summary>▶︎ラベルの分布と相関の図(クリックで開きます)</summary>
+<summary>▶︎ラベルの分布と相関の図(クリックで開く)</summary>
 
 <img width="1348" alt="スクリーンショット 2023-02-25 20 08 53" src="https://user-images.githubusercontent.com/35299183/221353669-b4d80e6c-4852-4baf-99ce-3caec1a31049.png">
-ラベルのデータ分布と相関係数の可視化
+
 </details>
 
 ### ③. モデル構成
@@ -95,7 +95,7 @@ Wavetable Osillator basics
   - 潜在変数の入力と出力部分で条件付けを実施
 
 <details>
-<summary>▶︎モデル構成詳細(クリックで開きます)</summary>
+<summary>▶︎モデル構成詳細(クリックで開く)</summary>
 
 <iframe width="700" height="460" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRM3M1KsQHm4GjGpavyBKXJLGuvPehU3XL7BO_lcD08egtKUAwBQ44VqG8W0MD0jSnd8NHL1bckYlV5/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
@@ -140,7 +140,7 @@ Wavetable Osillator basics
 - 元になるWavetableをモデルに入力(入力Wavetableの詳細は[上記参照](#実験))
 - 明るさ、リッチさ、暖かさをそれぞれ3段階の値(0,0.5,1.0)で条件付け生成し楽曲にて確認
 
-**(折りたたみのタブになっているのでクリックするとサンプルが展開されます。)**
+**(折りたたみのタブになっているのでクリックすると展開されます。)**
 
 <details>
 <summary>▶︎sine_wave</summary>
