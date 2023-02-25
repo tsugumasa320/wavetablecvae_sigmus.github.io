@@ -297,7 +297,7 @@ Wavetable Osillator basics
 
 ### 推論時間
 
-本研究では、Apple M1 MacBook Pro（2020）を使用し、pytorch-lightning 1.7.7で推論時間を計測した。
+本研究では、Apple M1 MacBook Pro（2020） CPUを使用し、pytorch-lightning 1.7.7で推論時間を計測した。
 その結果、推論時間は約2.6[ms]であった。この推論時間は、西ら[^8]によって示された弁別しやすい音（スネアドラムとピアノ）において認知される遅延時間である30[ms]の1/10程度であり、リアルタイムに十分に使用できることを示す。
 
 ## まとめ
