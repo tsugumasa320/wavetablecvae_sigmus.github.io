@@ -295,9 +295,10 @@ Wavetable Osillator basics
 - b=bright, r=rich, w=warm
 - Prelude of Suite No. 1 in G major, BWV 1007, J.S. Bachを使用
 
-### 実行時間
+### 推論時間
 
-0.0026[s]
+本研究では、Apple M1 MacBook Pro（2020）を使用し、pytorch-lightning 1.7.7で推論時間を計測した。
+その結果、推論時間は約2.6[ms]であった。この推論時間は、西ら[^8]によって示された弁別しやすい音（スネアドラムとピアノ）において認知される遅延時間である30[ms]の1/10程度であり、リアルタイムに十分に使用できることを示す。
 
 ## まとめ
 
@@ -348,3 +349,5 @@ Wavetable Osillator basics
 [^6]: 岩宮眞一郎：音響サイエンスシリーズ1 音色の感性学， コロナ社，pp.64-67， 2010.
 
 [^7]: Robert Bristow-Johnson, “Wavetable synthesis 101, a fundamental perspective,” in Audio Engineering Society Convention 101. Audio Engineering Society, (1996)
+
+[^8]: 西堀佑, 多田幸生, and 曽根卓朗. "遅延のある演奏系での遅延の認知に関する実験とその考察." 情報処理学会研究報告音楽情報科学 (MUS) 2003.127 (2003-MUS-053) (2003): 37-42.
