@@ -173,8 +173,8 @@ Wavetable Osillator basics
   <tr>
     <th>Estimate value</th>
     <th>b=0.109, r=0.115, w=0.00</th>
-    <th>b=0.124, r=0.421, w=0.01</th>
-    <th>b=0.198, r=0.559, w=0.08</th>
+    <th>b=0.124, r=0.421, w=0.012</th>
+    <th>b=0.198, r=0.559, w=0.083</th>
   </tr>
   <tr>
     <td>暖かさ(warm)</td>
@@ -223,8 +223,8 @@ Wavetable Osillator basics
   <tr>
     <th>Estimate value</th>
     <th>b=0.109, r=0.140, w=0.00</th>
-    <th>b=0.176, r=0.419, w=0.06</th>
-    <th>b=0.195, r=0.549, w=0.12</th>
+    <th>b=0.176, r=0.419, w=0.064</th>
+    <th>b=0.195, r=0.549, w=0.127</th>
   </tr>
   <tr>
     <td>暖かさ(warm)</td>
