@@ -82,6 +82,13 @@ Wavetable Osillator basics
 
 静的音色:時間的な変化のない音(定常音)について、周波数スペクトルによって規定される音[^6]
 
+<details>
+<summary>▶︎ラベルの分布と相関の図(クリックで開きます)</summary>
+
+<img width="1348" alt="スクリーンショット 2023-02-25 20 08 53" src="https://user-images.githubusercontent.com/35299183/221353669-b4d80e6c-4852-4baf-99ce-3caec1a31049.png">
+ラベルのデータ分布と相関係数の可視化
+</details>
+
 ### ③. モデル構成
   - 波形の時間依存性を捉えるために、 畳み込みとアップサンプリングを行うモデルを設計
   - 潜在変数の入力と出力部分で条件付けを実施
@@ -196,9 +203,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <td>明るさ(bright)</td>
-    <td><img width="250" src="oscillo/b_0/AKWF_squ.wav.jpeg"><br><audio controls src="examples/squ_wave/sigmus_wavetablecvae b0.wav" style="width:200px;height:30px;"></audio></td>
-    <td><img width="250" src="oscillo/b_0.5/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae b0.5.wav" style="width:200px;height:30px;"></audio></td>
-    <td><img width="250" src="oscillo/b_1.0/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae b1.0.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/b_0/AKWF_squ.wav.jpeg"><br><audio controls src="examples/squ_wave/sigmus_wavetablecvae b0.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/b_0.5/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae b0.5.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/b_1.0/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae b1.0.wav" style="width:200px;height:30px;"></audio></td>
   </tr>
   <tr>
     <th>Estimate value</th>
@@ -208,9 +215,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <td>リッチさ(rich)</td>
-    <td><img width="250" src="oscillo/r_0/AKWF_squ.wav.jpeg"><br><audio controls src="examples/squ_wave/sigmus_wavetablecvae r0.wav" style="width:200px;height:30px;"></audio></td>
-    <td><img width="250" src="oscillo/r_0.5/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae r0.5.wav" style="width:200px;height:30px;"></audio></td>
-    <td><img width="250" src="oscillo/r_1.0/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae r1.0.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/r_0/AKWF_squ.wav.jpeg"><br><audio controls src="examples/squ_wave/sigmus_wavetablecvae r0.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/r_0.5/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae r0.5.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/r_1.0/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae r1.0.wav" style="width:200px;height:30px;"></audio></td>
   </tr>
   <tr>
     <th>Estimate value</th>
@@ -220,9 +227,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <td>暖かさ(warm)</td>
-    <td><img width="250" src="oscillo/w_0/AKWF_squ.wav.jpeg"><br><audio controls src="examples/squ_wave/sigmus_wavetablecvae w0.wav" style="width:200px;height:30px;"></audio></td>
-    <td><img width="250" src="oscillo/w_0.5/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae w0.5.wav" style="width:200px;height:30px;"></audio></td>
-    <td><img width="250" src="oscillo/w_1.0/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae w1.0.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/w_0/AKWF_squ.wav.jpeg"><br><audio controls src="examples/squ_wave/sigmus_wavetablecvae w0.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/w_0.5/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae w0.5.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/w_1.0/AKWF_squ.wav.jpeg"><audio controls src="examples/squ_wave/sigmus_wavetablecvae w1.0.wav" style="width:200px;height:30px;"></audio></td>
   </tr>
   <tr>
     <th>Estimate value</th>
