@@ -282,7 +282,9 @@ Wavetable Osillator basics
   
 </details>
 
-グラフは縦軸が振幅、横軸がデータ長です
+グラフは縦軸が振幅、横軸がデータ長
+
+Prelude of Suite No. 1 in G major, BWV 1007, J.S. Bachを使用
 
 ## まとめ
 
