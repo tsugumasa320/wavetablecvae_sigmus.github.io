@@ -298,6 +298,7 @@ CVAEを採用し意味的なラベルでの条件付け生成を行う手法を�
   
 </details>
 
+
 - グラフは縦軸が振幅、横軸がデータ長
 - b=bright, r=rich, w=warm
 - Prelude of Suite No. 1 in G major, BWV 1007, J.S. Bachを使用
