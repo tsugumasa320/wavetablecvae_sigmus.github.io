@@ -65,7 +65,12 @@ Wavetable Osillator basics
 
 ## 関連研究
 
-- (WIP)
+Kreković[^3]は、オートエンコーダーを用いて知覚に基づいたラベルからウェーブテーブルを生成している。
+しかし、同研究においては、ウェーブテーブルのサイズを3つのパラメタに圧縮し、アップサンプリングを適用するという限定された手法が用いられており、生成されるウェーブテーブルの種類には制限がある。
+また、Hyrkasら[^9]は、ランダムにウェーブテーブルの潜在空間を探索することで音色の操作を試みたが、音色の特徴を表現するパラメタを使用することができず、
+操作の自由度が制限されている。
+本研究では、より直感的かつ多様な音色の生成を実現するために、CVAEを採用し意味的なラベルでの条件付け生成を行うことで、
+より直感的かつ多様な音色の生成を可能にします。
 
 ## 提案手法
 
@@ -179,9 +184,9 @@ Wavetable Osillator basics
   </tr>
   <tr>
     <td>暖かさ(warm)</td>
-    <td><img width="200" src="oscillo/w_0/AKWF_sin.wav.jpeg"><br><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w0.wav" style="width:250px;height:30px;"></audio></td>
-    <td><img width="200" src="oscillo/w_0.5/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w0.5.wav" style="width:250px;height:30px;"></audio></td>
-    <td><img width="200" src="oscillo/w_1.0/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w1.0.wav" style="width:250px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/w_0/AKWF_sin.wav.jpeg"><br><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w0.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/w_0.5/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w0.5.wav" style="width:200px;height:30px;"></audio></td>
+    <td><img width="200" src="oscillo/w_1.0/AKWF_sin.wav.jpeg"><audio controls src="examples/sine_wave/sigmus_wavetablecvae sine_w1.0.wav" style="width:200px;height:30px;"></audio></td>
   </tr>
   <tr>
     <th>Estimate value</th>
@@ -343,7 +348,7 @@ Wavetable Osillator basics
 
 [^3]: Kreković, Gordan. "DEEP CONVOLUTIONAL OSCILLATOR: SYNTHESIZING WAVEFORMS FROM TIMBRAL DESCRIPTORS." Sound and Music Computing (2022).
 
-[^4]: Engel, Jesse, et al. DDSP: Differentiable digital signal processing. In International Conference on Learning Representations, The International Conference on Learning Representations (2020)
+[^4]: Engel, Jesse, et al. "DDSP: Differentiable digital signal processing." In International Conference on Learning Representations, The International Conference on Learning Representations (2020)
 
 [^5]: Caillon, Antoine, and Philippe Esling. "RAVE: A variational autoencoder for fast and high-quality neural audio synthesis." arXiv preprint arXiv:2111.05011 (2021).
 
@@ -352,3 +357,5 @@ Wavetable Osillator basics
 [^7]: Robert Bristow-Johnson, “Wavetable synthesis 101, a fundamental perspective,” in Audio Engineering Society Convention 101. Audio Engineering Society, (1996)
 
 [^8]: 西堀佑, 多田幸生, and 曽根卓朗. "遅延のある演奏系での遅延の認知に関する実験とその考察." 情報処理学会研究報告音楽情報科学 (MUS) 2003.127 (2003-MUS-053) (2003): 37-42.
+
+[^9]: Hyrkas Jeremy. "WaVAEtable Synthesis" Computer Music Multidisciplinary Research (CMMR) 2021.
