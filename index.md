@@ -332,6 +332,8 @@ CVAEを採用し意味的なラベルでの条件付け生成を行う手法を�
 
 <img width="1353" alt="スクリーンショット 2023-02-18 17 12 39" src="https://user-images.githubusercontent.com/35299183/219849696-a2682dfa-ee02-4023-a7da-4c10a623dcd4.png">
 
+潜在空間の操作部分をNistalら[^10]を参考にデザインした
+
 <details>
 <summary>▶︎おまけ：DAW上での使用イメージ(クリックで開きます)</summary>
 
@@ -361,3 +363,5 @@ CVAEを採用し意味的なラベルでの条件付け生成を行う手法を�
 [^8]: 西堀佑, 多田幸生, and 曽根卓朗. "遅延のある演奏系での遅延の認知に関する実験とその考察." 情報処理学会研究報告音楽情報科学 (MUS) 2003.127 (2003-MUS-053) (2003): 37-42.
 
 [^9]: Hyrkas Jeremy. "WaVAEtable Synthesis" Computer Music Multidisciplinary Research (CMMR) 2021.
+
+[^10]: Nistal, Javier, et al. "DrumGAN VST: A Plugin for Drum Sound Analysis/Synthesis with Autoencoding Generative Adversarial Networks." arXiv preprint arXiv:2206.14723 (2022).
