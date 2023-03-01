@@ -53,8 +53,6 @@
 <details>
 <summary>▶︎参考動画(クリックで開く)</summary>
 
-Wavetable Osillator basics
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k81hoZODOP0?start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 </details>
