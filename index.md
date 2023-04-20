@@ -340,22 +340,22 @@ CVAEを採用し意味的なラベルでの条件付け生成を行う手法を�
 
 ## 参考文献
 
-[^1]: Kingma, Durk P., et al. “Semi-supervised learning with deep generative models.” Advances in neural information processing systems 27 (2014).
+[^1]: Kingma, Durk P., et al. “Semi-supervised learning with deep generative models.” Advances in neural information processing systems 27, 2014.
 
 [^2]: "Adventure Kid Research & Technology (AKRT)" https://www.adventurekid.se/akrt/
 
-[^3]: Kreković, Gordan. "DEEP CONVOLUTIONAL OSCILLATOR: SYNTHESIZING WAVEFORMS FROM TIMBRAL DESCRIPTORS." Sound and Music Computing (2022).
+[^3]: Kreković, Gordan. "DEEP CONVOLUTIONAL OSCILLATOR: SYNTHESIZING WAVEFORMS FROM TIMBRAL DESCRIPTORS." Sound and Music Computing, 2022.
 
-[^4]: Engel, Jesse, et al. "DDSP: Differentiable digital signal processing." In International Conference on Learning Representations, The International Conference on Learning Representations (2020)
+[^4]: Engel, Jesse, et al. "DDSP: Differentiable digital signal processing." In International Conference on Learning Representations, The International Conference on Learning Representations, 2020.
 
-[^5]: Caillon, Antoine, and Philippe Esling. "RAVE: A variational autoencoder for fast and high-quality neural audio synthesis." arXiv preprint arXiv:2111.05011 (2021).
+[^5]: Caillon, Antoine, and Philippe Esling. "RAVE: A variational autoencoder for fast and high-quality neural audio synthesis." arXiv preprint arXiv:2111.05011, 2021.
 
 [^6]: 岩宮眞一郎：音響サイエンスシリーズ1 音色の感性学， コロナ社，pp.64-67， 2010.
 
-[^7]: Robert Bristow-Johnson, “Wavetable synthesis 101, a fundamental perspective,” in Audio Engineering Society Convention 101. Audio Engineering Society, (1996)
+[^7]: Robert Bristow-Johnson, “Wavetable synthesis 101, a fundamental perspective,” in Audio Engineering Society Convention 101. Audio Engineering Society, 1996.
 
-[^8]: 西堀佑, 多田幸生, and 曽根卓朗. "遅延のある演奏系での遅延の認知に関する実験とその考察." 情報処理学会研究報告音楽情報科学 (MUS) 2003.127 (2003-MUS-053) (2003): 37-42.
+[^8]: 西堀佑, 多田幸生, and 曽根卓朗. "遅延のある演奏系での遅延の認知に関する実験とその考察." 情報処理学会研究報告音楽情報科学 (MUS) 2003.127 2003-MUS-053, 2003.
 
 [^9]: Hyrkas Jeremy. "WaVAEtable Synthesis" Computer Music Multidisciplinary Research (CMMR) 2021.
 
-[^10]: Nistal, Javier, et al. "DrumGAN VST: A Plugin for Drum Sound Analysis/Synthesis with Autoencoding Generative Adversarial Networks." arXiv preprint arXiv:2206.14723 (2022).
+[^10]: Nistal, Javier, et al. "DrumGAN VST: A Plugin for Drum Sound Analysis/Synthesis with Autoencoding Generative Adversarial Networks." arXiv preprint arXiv:2206.14723, 2022.
