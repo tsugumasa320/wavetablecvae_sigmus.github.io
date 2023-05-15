@@ -1,5 +1,6 @@
 <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script> <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
+
 ## 目次
 
 - [序論](#序論)
@@ -190,7 +191,7 @@ CVAEを採用し意味的なラベルでの条件付け生成を行う手法を�
     <th>b=0.173, r=0.180, w=0.889</th>
   </tr>
 </table>
-  
+
 </details>
 
 <details>
@@ -289,7 +290,7 @@ CVAEを採用し意味的なラベルでの条件付け生成を行う手法を�
     <th>b=0.250, r=0.551, w=0.817</th>
   </tr>
 </table>
-  
+
 </details>
 
 
